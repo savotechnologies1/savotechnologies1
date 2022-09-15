@@ -1,0 +1,197 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@lg1: ~"(max-width: 1024px)"; // laptop
+@md: ~"(max-width: 768px)";
+@sm573: ~"(max-width: 573px)";
+@sm: ~"(max-width: 549px)";
+@xs: ~"(max-width: 425px)";
+@xs375: ~"(max-width: 375px)";
+@xs320: ~"(max-width: 320px)";
+@xs280: ~"(max-width: 280px)";
+// End of Media Queries
+@pixel: 10px;
+@whiteColor: #fff;
+@btnColor: @primary-color;
+@onlineColor: #1faa59;
+
+.settingsFormItem {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px !important;
+  margin-bottom: @pixel !important;
+  :global {
+    .ant-form-item-label {
+      @media @xs {
+        padding-bottom: 0px !important;
+      }
+    }
+    .ant-form-item-label > label {
+      font-size: @pixel + 8px !important;
+      font-weight: bold !important;
+      height: 40px !important;
+      @media @md {
+        font-size: @pixel + 6px !important;
+      }
+      @media @xs {
+        font-size: @pixel + 3px !important;
+        margin-bottom: 0px !important;
+        padding-bottom: 0px !important;
+        height: 30px !important;
+      }
+    }
+    label::after {
+      margin: 0 10px 0 2px !important;
+    }
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      width: 100% !important;
+      height: 40px !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      border-radius: 5px !important;
+      background-color: @whiteColor !important;
+      font-size: 16px !important;
+      @media @md {
+        font-size: @pixel + 6px !important;
+        width: 258px !important;
+        height: 40px !important;
+        font-size: @pixel + 5px !important;
+      }
+      @media @xs {
+        font-size: @pixel + 3px !important;
+        height: 30px !important;
+        width: 100% !important;
+      }
+    }
+    .ant-input,
+    .ant-input-number {
+      width: 100% !important;
+      height: 40px !important;
+      display: flex !important;
+      justify-content: flex-start !important;
+      align-items: center !important;
+      border-radius: 5px !important;
+      background-color: @whiteColor !important;
+      font-size: 16px !important;
+      @media @md {
+        font-size: @pixel + 6px !important;
+        width: 258px !important;
+        height: 40px !important;
+        font-size: @pixel + 5px !important;
+      }
+      @media @xs {
+        font-size: @pixel + 3px !important;
+        height: 30px !important;
+        width: 100% !important;
+      }
+    }
+  }
+}
+.mtitleText {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.msubtitleText {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.mItemRow {
+  font-size: 16px;
+  margin: 8px 10px;
+}
+.settingsModal {
+  width: fit-content !important;
+  height: fit-content !important;
+  border-radius: 10px !important;
+  .ant-modal {
+    padding: 0px !important;
+    @media @xs {
+      width: 100% !important;
+    }
+  }
+  .ant-modal-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: max-content !important;
+    border-radius: 10px !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    align-items: flex-start !important;
+    padding: 1.5rem;
+    @media @xs {
+      width: 100% !important;
+    }
+  }
+  .ant-modal-mask {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+  & .ant-modal-body {
+    padding: 0px !important;
+    overflow: hidden;
+    width: 500px !important;
+    @media @md {
+      width: 100% !important;
+    }
+    @media @sm {
+      width: 100% !important;
+    }
+    @media @xs {
+      width: 100% !important;
+    }
+  }
+  .ant-modal-close {
+    top: 5px !important;
+    right: 5px !important;
+  }
+  .ant-modal-close-x {
+    width: 25px !important;
+    height: 25px !important;
+    line-height: 25px !important;
+    font-size: 13px !important;
+    &:hover {
+      background-color: @btnColor !important;
+      border-radius: 50% !important;
+      color: @whiteColor !important;
+    }
+  }
+  @media @xs {
+    top: -5px !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.bradius {
+  border-radius: 5px;
+}
+.pt {
+  padding-top: 1.5rem;
+}
+.py {
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  @media @xs {
+    padding-bottom: 0.5rem;
+  }
+}
+.px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  @media @xs {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}

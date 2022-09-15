@@ -1,0 +1,257 @@
+//Media Queries
+@xl: ~"(max-width: 1600px)";
+@lg: ~"(max-width: 1440px)";
+@lg1024: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+@xs375: ~"(max-width: 375px)";
+// End of Media Queries
+
+@pixel: 10px;
+@lineColor: #e23844;
+@colorWhite: #fff;
+@shadowcolor:0px 0px 15px 5px #e9aeae;
+@textColor: #232323;
+@lineButtonColor: #eedddd;
+
+.blogTitle {
+  text-align: center;
+  margin-bottom: @pixel !important;
+  font-size: 30px;
+  @media @md {
+    font-size: 20px !important;
+    margin-bottom: @pixel - 5px !important;
+  }
+  @media @xs {
+    font-size: 18px !important;
+    margin-bottom: @pixel - 5px !important;
+  }
+}
+.blogLayout {
+  margin: 0px auto;
+  padding-left: calc(16.6666% - 20px);
+  padding-right: calc(16.6666% - 20px);
+  @media @lg {
+    padding-left: calc(14.6666% - 20px);
+  }
+  @media (max-width: 1366px) {
+    padding-left: calc(10.6666% - 20px);
+  }
+  @media @lg1024 {
+    padding-left: calc(6.6666% - 20px);
+    padding-right: calc(10% - 20px);
+  }
+  @media @md {
+    padding-left: calc(4.6666% - 20px);
+    padding-right: calc(3% - 20px);
+  }
+}
+.blogRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px 20px;
+}
+.spanBlogDesh {
+  width: 70px;
+  height: 2.5px;
+  background-color: @lineColor;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  border-radius: @pixel + 10px !important;
+  overflow: hidden;
+}
+.justityImage {
+  border-radius: @pixel;
+  overflow: hidden;
+}
+.blogCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blogCard {
+  cursor: pointer;
+  border-radius: @pixel + 10px;
+  border: 0px !important;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  &:hover {
+    box-shadow: @shadowcolor;
+    border-radius: @pixel + 10px;
+    transition: all 0.5s;
+  }
+  @media @lg {
+    width: 294px;
+  }
+  @media @lg1024 {
+    width: 245px !important;
+    height: 250px !important;
+  }
+  @media @xs {
+    width: 230px !important;
+    margin-left: 13px !important;
+  }
+  @media @md {
+    width: 317px !important;
+    overflow: hidden;
+  }
+}
+.blogCardIsMobile {
+  cursor: pointer;
+  border-radius: @pixel + 10px;
+  overflow: hidden;
+  margin-bottom: @pixel + 20px;
+  margin: 10px;
+  &:hover {
+    box-shadow: @shadowcolor;
+    border-radius: @pixel + 10px;
+    transition: all 0.5s;
+  }
+}
+.divblogclass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  padding: 25px 20px;
+  margin: 0px auto;
+  @media @lg {
+    margin: 0px auto;
+  }
+  @media @lg1024 {
+    margin: 0px 17px !important;
+    overflow: hidden;
+  }
+  @media @md {
+    height: 300px !important;
+    padding: 25px 0px !important;
+    overflow: hidden;
+  }
+  @media @xs {
+    height: 300px !important;
+  }
+}
+.cardImgStyle {
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  @media @lg {
+    object-position: left;
+  }
+}
+.titleBioCol {
+  display: flex;
+  flex-direction: column;
+}
+.blogTitleText {
+  color: @lineColor !important;
+  font-weight: bold;
+  font-size: @pixel + 4px !important;
+}
+.biosmallText {
+  font-size: @pixel + 2px !important;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: @textColor;
+
+  @supports (-webkit-line-clamp: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  @media @xs {
+    font-size: @pixel !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .cardImgStyle {
+    height: 130px;
+  }
+}
+
+@media (max-width: 320px) {
+  .blogLayout {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .blogLayout {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .blogLayout {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cardImgStyle {
+    height: 165px;
+  }
+}
+
+//Override Style
+.ant-carousel .slick-dots li.slick-active button {
+  background: @lineColor !important;
+  opacity: 1 !important;
+  height: 10px !important;
+  width: 85px !important;
+  border-radius: 10px !important;
+  margin-left: @pixel - 5px !important;
+}
+.ant-carousel .slick-dots li button {
+  display: block !important;
+  width: 85px !important;
+  height: 10px !important;
+  padding: 0 !important;
+  background: #eedddd !important;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 1 !important;
+  transition: all 0.5s;
+}
+.ant-carousel .slick-dots li button:hover,
+.ant-carousel .slick-dots li button:focus {
+  opacity: 1 !important;
+}
+.ant-carousel .slick-dots {
+  position: relative !important;
+  right: -50% !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 10 !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding-left: 0 !important;
+  list-style: none !important;
+  margin-bottom: 90px !important;
+  margin-top: 35px !important;
+  @media (max-width: 766px) {
+    margin-bottom: 40px !important;
+    margin-top: 30px !important;
+  }
+  @media @xs {
+    margin-bottom: 40px !important;
+    margin-top: 30px !important;
+  }
+}
+.ant-carousel .slick-dots li {
+  margin-right: 80px !important;
+}

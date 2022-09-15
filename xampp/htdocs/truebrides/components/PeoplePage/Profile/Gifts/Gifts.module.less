@@ -1,0 +1,542 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@lg1024: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm700: ~"(max-width: 700px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+@xs375: ~"(max-width: 375px)";
+@xs320: ~"(max-width: 320px)";
+// End of Media Queries
+
+@pixel: 10px;
+@white: #fff;
+@grey: #ccc;
+@color: #222;
+@hover: #e8e8e8;
+@borderColor: #ccc;
+@btnColor: #d5232f;
+
+.disclaimerText {
+  font-size: 13px;
+  line-height: 1.4;
+}
+.resend_btn {
+  margin-top: 5px;
+}
+.cardRowForGifts {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px !important;
+  flex-wrap: wrap !important;
+  padding: 0px 5px;
+  width: 100%;
+  @media @lg {
+    padding: 0px 5px !important;
+    padding-left: 5px !important;
+  }
+  @media @lg1024 {
+    padding: 0px 5px !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media @md {
+    justify-content: space-between;
+  }
+  @media @sm700 {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  @media @xs {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.centerRowGifts {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px !important;
+  flex-wrap: wrap !important;
+  padding: 0px 5px;
+  width: 100%;
+  @media @lg {
+    padding: 0px 5px !important;
+    padding-left: 0px !important;
+  }
+  @media (max-width: 1366px) {
+    padding-left: 5px !important;
+  }
+  @media @lg1024 {
+    padding: 0px 5px !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media @md {
+    justify-content: space-between;
+    padding: 0px 5px !important;
+  }
+}
+.centerAlign {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media @lg {
+    padding-left: 0px !important;
+  }
+  @media @lg1024 {
+    justify-content: center;
+  }
+  @media @xs {
+    justify-content: space-between;
+  }
+}
+.div_class_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.colTextBetween {
+  font-size: @pixel+6px;
+  font-weight: 600;
+  margin: 0;
+  color: @color;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+.width_btn {
+  height: 40px !important;
+  font-size: @pixel + 3px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  margin-bottom: @pixel !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 12%) 0 1px 6px, rgba(0, 0, 0, 12%) 0 1px 4px !important;
+  border-radius: 5px !important;
+  overflow: hidden;
+  border-radius: 5px !important;
+  margin: 0px 0px !important;
+  padding: 0px 14px !important;
+  @media @lg {
+    margin: 0px 5px !important;
+  }
+  @media (max-width: 1366px) {
+    margin: 0px 0px !important;
+  }
+  @media @lg1024 {
+    height: 35px !important;
+    margin: 0px 0px !important;
+    width: fit-content !important;
+  }
+}
+.margin {
+  height: 35px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  margin-bottom: 5px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 12%) 0 1px 6px, rgba(0, 0, 0, 12%) 0 1px 4px !important;
+  border-radius: 5px !important;
+  overflow: hidden;
+  border-radius: 5px !important;
+  padding: 0px 14px !important;
+  &:focus {
+    color: black !important;
+  }
+  @media @lg {
+    font-size: 12px !important;
+  }
+  @media @lg1024 {
+    font-size: 10px !important;
+    margin-bottom: 10px !important;
+    width: 49% !important;
+  }
+  @media @md {
+    margin-bottom: 5px !important;
+    width: 49% !important;
+  }
+}
+.giftsBtn {
+  height: 40px !important;
+  font-size: @pixel + 3px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  margin-bottom: @pixel !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 12%) 0 1px 6px, rgba(0, 0, 0, 12%) 0 1px 4px !important;
+  border-radius: 5px !important;
+  overflow: hidden;
+  &:hover {
+    background-color: @hover !important;
+    color: @color !important;
+    box-shadow: rgba(0, 0, 0, 12%) 0 1px 6px, rgba(0, 0, 0, 12%) 0 1px 4px !important;
+  }
+  &:focus {
+    color: black !important;
+  }
+  :global {
+    .ant-btn:active {
+      color: #222 !important;
+    }
+    .ant-btn:focus {
+      color: black !important;
+    }
+    .anticon {
+      line-height: 0 !important;
+      @media (max-width: 1366px) {
+        font-size: 16px !important;
+      }
+      @media @lg1024 {
+        line-height: 1 !important;
+        font-size: 14px !important;
+      }
+    }
+  }
+  @media @lg {
+    height: 40px !important;
+    font-size: 12px !important;
+  }
+  @media @lg1024 {
+    font-size: 10px !important;
+    padding: 5px !important;
+    height: 35px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media @md {
+    font-size: 11px !important;
+    height: 35px !important;
+    margin-bottom: 5px !important;
+  }
+  @media @sm700 {
+    margin-bottom: @pixel !important;
+  }
+  @media @sm {
+    width: 100% !important;
+  }
+  @media @xs {
+    margin-bottom: 5px !important;
+    height: 30px !important;
+    font-size: @pixel !important;
+    padding: 0px 10px !important;
+    width: 100% !important;
+  }
+  @media @xs320 {
+    padding: 0px 10px !important;
+  }
+}
+.sendGift {
+  @media @sm {
+    margin-left: 6px !important;
+  }
+  @media @xs {
+    margin-left: 6px !important;
+  }
+  @media @xs375 {
+    margin-left: 13px !important;
+  }
+  @media @xs320 {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+  }
+}
+.fullwidth {
+  width: 85% !important;
+  margin-right: 10px !important;
+  border-radius: 5px !important;
+  font-size: @pixel + 2px !important;
+  @media @xs {
+    width: 80% !important;
+  }
+}
+.full_w_giftcol.ant-col-xl-16 {
+  z-index: 11;
+  max-width: 100% !important;
+  width: 70% !important;
+  @media @lg {
+    max-width: 100% !important;
+    width: 85% !important;
+  }
+  @media @lg1024 {
+    max-width: 80% !important;
+  }
+  @media @md {
+    max-width: 100% !important;
+  }
+}
+.blockBtn {
+  width: fit-content !important;
+  height: 40px !important;
+  font-size: @pixel + 3px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  margin-left: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 12%) 0 1px 6px, rgba(0, 0, 0, 12%) 0 1px 4px !important;
+  border-radius: 5px !important;
+  overflow: hidden;
+  &:hover {
+    background-color: @hover !important;
+    color: @color !important;
+    box-shadow: rgba(0, 0, 0, 12%) 0 1px 6px, rgba(0, 0, 0, 12%) 0 1px 4px !important;
+  }
+  :global {
+    .anticon {
+      line-height: 0 !important;
+    }
+  }
+  @media @lg {
+    height: 42px !important;
+  }
+  @media @md {
+    font-size: 11px !important;
+    height: 35px !important;
+  }
+  @media @sm700 {
+  }
+  @media @xs {
+    height: 30px !important;
+    font-size: @pixel !important;
+    padding: 0px 10px !important;
+  }
+}
+.blockIcon {
+  cursor: pointer !important;
+  width: 15px;
+  color: #4e4e4e !important;
+  transition: all 0.5s;
+}
+#daterequestmodal {
+  :global {
+    .ant-form-item {
+      margin-top: @pixel + 10px !important;
+      margin-bottom: 0px !important;
+    }
+    .ant-picker {
+      width: 100% !important;
+    }
+  }
+}
+.dateModal {
+  padding-bottom: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 50px 30px 50px !important;
+  :global {
+    width: fit-content !important;
+    height: fit-content !important;
+    .ant-modal {
+      height: fit-content !important;
+      padding: 20px 50px 30px 50px !important;
+      @media @xs {
+        width: 100% !important;
+      }
+    }
+    .ant-modal-content {
+      padding: 20px 50px 30px 50px !important;
+      border-radius: @pixel !important;
+    }
+    .ant-modal-body {
+      padding: 0px !important;
+    }
+  }
+}
+.creditRow {
+  width: 100%;
+  height: 100%;
+}
+.Hrs72Text {
+  text-align: center !important;
+}
+
+//RequestModal
+.requestModal {
+  :global {
+    .ant-modal-content {
+      padding: 30px !important;
+    }
+  }
+}
+.requestModal_class {
+  width: max-content !important;
+  :global {
+    background-color: #fff;
+    width: fit-content !important;
+    height: fit-content !important;
+    border-radius: 10px !important;
+    background-color: @white;
+    .ant-modal {
+      width: fit-content !important;
+      padding: 0px !important;
+      @media @xs {
+        width: 100% !important;
+      }
+    }
+    .ant-modal-content {
+      background: transparent !important;
+      width: fit-content !important;
+      height: fit-content !important;
+      padding: 35px 20px !important;
+      align-items: flex-start !important;
+      @media @xs {
+        padding: 20px 15px !important;
+        width: 100% !important;
+      }
+    }
+    .ant-modal-body {
+      width: 595px !important;
+      padding: @pixel !important;
+      @media @md {
+        width: 100% !important;
+      }
+    }
+    .ant-modal-close {
+      top: 5px !important;
+      right: 5px !important;
+    }
+    .ant-modal-close-x {
+      width: 25px !important;
+      height: 25px !important;
+      line-height: 25px !important;
+      font-size: 13px !important;
+      &:hover {
+        background-color: @btnColor !important;
+        border-radius: 50% !important;
+        color: @white !important;
+      }
+    }
+  }
+  @media @xs {
+    top: -5px !important;
+    width: 100% !important;
+  }
+}
+.requestText {
+  color: @color !important;
+  font-size: @pixel + 8px !important;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+  @media @sm {
+    font-size: @pixel + 6px !important;
+  }
+}
+.eligible_strong {
+  padding: 0px 5px;
+}
+.mailLink {
+  padding: 0px 5px !important;
+  text-decoration: underline !important;
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+.askCol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.askBtn {
+  margin: 10px 0px !important;
+}
+.sendemailInput {
+  width: 100%;
+}
+#ContactExchangeForm {
+  :global {
+    .ant-form-item {
+      margin-bottom: 0px !important;
+    }
+    .ant-form-item-control-input {
+      text-align: center !important;
+      margin: 10px 0px !important;
+    }
+  }
+}
+.flexBtn {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column !important;
+}
+.date_datepicker_class {
+  :global {
+    .ant-picker-panel-container {
+      width: fit-content !important;
+      @media @xs {
+        margin-left: 10px !important;
+        width: auto !important;
+      }
+      @media @xs375 {
+        width: auto !important;
+      }
+    }
+    .ant-picker-panel {
+      @media @xs {
+        width: 100% !important;
+      }
+    }
+    .ant-picker-content {
+      table-layout: auto !important;
+      width: min-content !important;
+    }
+    .ant-picker-body {
+      width: min-content !important;
+      @media @xs {
+        font-size: @pixel+ 2px !important;
+        padding: 0px 5px !important;
+      }
+    }
+    .ant-picker-time-panel {
+      width: 100% !important;
+    }
+    .ant-picker-dropdown {
+      position: fixed !important;
+      top: 255px !important;
+    }
+    .ant-picker-time-panel-column {
+      @media @xs {
+        width: 39px !important;
+        right: 4px !important;
+        font-size: @pixel + 2px !important;
+      }
+      li {
+        @media @xs {
+          margin-left: -6px !important;
+        }
+      }
+    }
+    .ant-picker-date-panel {
+      width: auto !important;
+      @media @xs {
+        width: min-content !important;
+      }
+    }
+    .ant-picker-header {
+      font-size: @pixel + 2px !important;
+      height: 34px !important;
+    }
+    .ant-picker-ranges {
+      @media @xs {
+        padding: 0px 5px;
+      }
+    }
+  }
+}

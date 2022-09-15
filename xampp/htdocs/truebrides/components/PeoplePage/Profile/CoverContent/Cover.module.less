@@ -1,0 +1,617 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@lg1024: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+@xs375: ~"(max-width: 375px)";
+@xs320: ~"(max-width: 320px)";
+// End of Media Queries
+
+@whiteColor: #fff;
+@bgColor: rgba(0, 0, 0, 0.5);
+@hoverColor: rgba(0, 0, 0, 0.8);
+@pixel: 10px;
+@btnColor: #d5232f;
+@btnHoverSave: #ea4550;
+@textColor: #222;
+@onlineIconColor: #009f83;
+@iconColor: #4e4e4e;
+
+.backBtn {
+  background-color: @bgColor !important;
+  color: @whiteColor !important;
+  border: none !important;
+  padding: 0px 25px !important;
+  border-radius: 5px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: @hoverColor !important;
+    color: @whiteColor !important;
+    border-color: @hoverColor !important;
+  }
+  :global {
+    .anticon {
+      line-height: 0 !important;
+    }
+  }
+  @media @xs {
+    font-size: @pixel+2px !important;
+    padding: 0px 10px !important;
+    height: 25px !important;
+  }
+}
+.coverRoundCircleSpan {
+  background-color: @bgColor !important;
+  cursor: pointer;
+  border: 1px solid #fff !important;
+  opacity: 1 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 25px !important;
+  height: 25px !important;
+}
+.coverEditIcon {
+  color: #fff !important;
+  font-size: @pixel + 3px !important;
+}
+.coverOnlineIcon {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  color: @onlineIconColor;
+  font-size: 12px;
+  background-color: @onlineIconColor;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  @media @xs {
+    bottom: 15px;
+  }
+  @media @xs320 {
+    right: 8px;
+  }
+}
+.coverOfflineIcon {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  color: rgba(128, 128, 128, 0.9);
+  font-size: 12px;
+  background-color: rgba(128, 128, 128, 0.9);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  @media @xs {
+    bottom: 15px;
+  }
+  @media @xs320 {
+    right: 8px;
+  }
+}
+.col1 {
+  display: flex;
+}
+.uploadProfileImg {
+  cursor: pointer;
+  display: flex;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px @bgColor;
+  background: @whiteColor;
+  object-fit: cover;
+  object-position: center;
+  @media @xs {
+    width: 150px;
+    height: 150px;
+  }
+  @media @xs375 {
+    width: 150px;
+    height: 150px;
+  }
+  @media @xs320 {
+    width: 130px;
+    height: 130px;
+  }
+}
+.coverUploadBtn {
+  position: absolute !important;
+  border-radius: 50% !important;
+  bottom: 15px !important;
+  right: 5px !important;
+  text-align: center !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: #fff !important;
+  border: none !important;
+  :global {
+    .anticon {
+      line-height: 0px !important;
+    }
+  }
+  &:hover {
+    background-color: @hoverColor !important;
+    color: @whiteColor !important;
+    border-color: @hoverColor !important;
+  }
+  @media @md {
+    bottom: 15px !important;
+    right: 5px !important;
+  }
+  @media @xs {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: @pixel+3px !important;
+    bottom: 10px !important;
+    right: 0px !important;
+  }
+  @media @xs375 {
+    font-size: @pixel + 1px !important;
+  }
+  @media @xs320 {
+    font-size: @pixel !important;
+    margin-left: 2px !important;
+  }
+}
+.coverColMain {
+  display: flex;
+}
+.coverUserNameRow {
+  align-items: center;
+  width: 100% !important;
+  flex-direction: column;
+  padding: 30px 0px 0px 0px !important;
+  position: relative;
+  @media @xs {
+    padding: 0px 0px !important;
+  }
+  @media @xs375 {
+    padding: 0px 0px !important;
+  }
+  @media @xs320 {
+    padding: 0px 0px !important;
+  }
+  :global {
+    .ant-affix {
+      height: auto !important;
+      width: 100% !important;
+      right: 12.5% !important;
+      display: flex;
+      justify-content: center;
+      @media (max-width: 981px) {
+        right: 0% !important;
+      }
+      @media @md {
+        top: 64px !important;
+        right: 0% !important;
+      }
+    }
+  }
+}
+.coverUserNameRow_Chatopen {
+  align-items: center;
+  width: 100% !important;
+  flex-direction: column;
+  padding: 30px 0px 0px 0px !important;
+  position: relative;
+  @media @xs {
+    padding: 0px 0px !important;
+  }
+  @media @xs375 {
+    padding: 0px 0px !important;
+  }
+  @media @xs320 {
+    padding: 0px 0px !important;
+  }
+  :global {
+    .ant-affix {
+      width: 54% !important;
+      left: 0px !important;
+      display: block;
+      @media @lg {
+        width: 49% !important;
+      }
+      @media @lg1024 {
+        width: 41.5% !important;
+      }
+      @media (max-width: 990px) {
+        width: 49% !important;
+      }
+      @media @md {
+        width: 49% !important;
+        top: 64px !important;
+      }
+    }
+  }
+}
+.fvrtIcon {
+  background-color: @bgColor !important;
+  color: @whiteColor !important;
+  border: none !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  &:hover {
+    background-color: @hoverColor !important;
+    color: @whiteColor !important;
+    border-color: @hoverColor !important;
+  }
+  :global {
+    .anticon {
+      line-height: 0 !important;
+    }
+  }
+}
+.nameiconDiv {
+  margin-top: 10px;
+  @media @xs {
+    padding-top: 25px !important;
+  }
+}
+.uploadPhotoRow {
+  width: 100% !important;
+
+  :global {
+    .ant-modal-wrap .antd-img-crop-modal {
+      @media @xs {
+        height: 100% !important;
+      }
+    }
+    .ant-modal {
+      @media @xs {
+        height: 100% !important;
+      }
+    }
+    .ant-modal-content {
+      @media @xs {
+        height: 100% !important;
+      }
+    }
+  }
+}
+.coverUserNameDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.userNameandIdCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.userNameText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: @pixel + @pixel !important;
+  color: @textColor !important;
+  font-weight: bold;
+  @media @lg {
+    font-size: @pixel + 9px !important;
+  }
+  @media @lg1024 {
+    font-size: @pixel + 5px !important;
+  }
+  @media @xs {
+    margin-top: 0px !important;
+    font-size: @pixel+6px !important;
+  }
+  @media @xs375 {
+    font-size: @pixel + 2px !important;
+  }
+}
+.coverUserNameTxt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: @pixel + @pixel !important;
+  color: @textColor !important;
+  font-weight: bold;
+  @media @lg {
+    font-size: @pixel + 9px !important;
+  }
+  @media @lg1024 {
+    font-size: @pixel + 5px !important;
+  }
+  @media @xs {
+    margin-top: 0px !important;
+    font-size: @pixel+6px !important;
+    max-width: 150px !important;
+  }
+  @media @xs375 {
+    font-size: @pixel + 2px !important;
+    max-width: 120px !important;
+  }
+}
+.chatOpen_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: @pixel + @pixel !important;
+  color: @textColor !important;
+  font-weight: bold;
+  @media @lg {
+    font-size: @pixel + 9px !important;
+  }
+  @media (max-width: 1100px) {
+    max-width: 100px !important;
+  }
+  @media @lg1024 {
+    font-size: @pixel + 2px !important;
+  }
+  @media @xs {
+    margin-top: 0px !important;
+    font-size: @pixel+6px !important;
+  }
+  @media @xs375 {
+    font-size: @pixel + 2px !important;
+  }
+}
+.editIconWhite {
+  color: @whiteColor;
+  font-size: @pixel + 6px !important;
+  @media @xs {
+    font-size: @pixel + 3px !important;
+  }
+}
+.roundCircleSpanWhite {
+  cursor: pointer;
+  border: 1px solid @whiteColor;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px @pixel - 5px;
+  @media @xs {
+    width: 20px;
+    height: 20px;
+  }
+}
+.userIdText {
+  font-size: @pixel + 4px;
+  color: @textColor !important;
+  @media @xs {
+    font-size: @pixel + 2px;
+  }
+}
+.headBtnCover {
+  width: 100% !important;
+}
+.coverHeadCol {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.creditBtn {
+  background-color: @bgColor !important;
+  border: none !important;
+  font-weight: bold !important;
+  color: @whiteColor !important;
+  padding: 0px 25px !important;
+  border-radius: 5px !important;
+  &:hover {
+    background-color: @hoverColor !important;
+    border-color: @hoverColor !important;
+  }
+  @media @xs {
+    font-size: @pixel + 2px !important;
+    padding: 0px 10px !important;
+    height: 25px !important;
+  }
+}
+.refillSpan {
+  color: @btnHoverSave;
+  text-decoration: underline;
+  padding: 0px 5px;
+}
+.coverModalInput {
+  height: 40px !important;
+  width: 100% !important;
+  font-size: @pixel + 8px !important;
+  @media @md {
+    font-size: @pixel + 6px !important;
+  }
+  @media @xs {
+    height: 30px !important;
+    font-size: @pixel + 3px !important;
+  }
+}
+.coverUploadCol {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 40px;
+}
+.uploadCoverBtn {
+  border-radius: 5px !important;
+  @media @xs {
+    height: 30px !important;
+    font-size: 12px !important;
+    padding: 5px !important;
+  }
+}
+.coverImgRow {
+  top: 45px !important;
+  position: relative !important;
+}
+.formLabelForName {
+  font-weight: 600 !important;
+  font-size: @pixel + 8px !important;
+  text-align: right;
+  padding-right: 5px !important;
+}
+.coverSaveBtnRow {
+  text-align: center;
+  margin: 35px 0px 0px 0px !important;
+  @media @lg {
+    margin: 30px 0px 0px 0px !important;
+  }
+  @media @xs {
+    margin: 0px 0px 0px 0px !important;
+  }
+}
+.formSaveBtn {
+  margin-bottom: 0px !important;
+  .ant-form-item-control {
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+.the_new_class {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: max-content !important;
+  padding-bottom: 0px !important;
+  :global {
+    background-color: #fff;
+    width: fit-content !important;
+    height: fit-content !important;
+    border-radius: 10px !important;
+    background-color: @whiteColor;
+    .ant-modal {
+      padding-bottom: 0px !important;
+      padding: 0px !important;
+      @media @xs {
+        width: 100% !important;
+        height: -webkit-fill-available !important;
+      }
+    }
+    .ant-modal-content {
+      border-radius: 10px !important;
+      width: fit-content !important;
+      height: fit-content !important;
+      padding: 35px 20px !important;
+      align-items: flex-start !important;
+      @media @sm {
+        padding: 20px 20px !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+      @media @xs375 {
+        padding: @pixel + 5px 15px !important;
+      }
+    }
+    .ant-modal-mask {
+      background-color: rgba(0, 0, 0, 0.45) !important;
+      backdrop-filter: blur(6px) !important;
+    }
+    .ant-modal-body {
+      padding: 25px !important;
+      width: 100% !important;
+      @media @sm {
+        padding: 0px !important;
+      }
+    }
+    .ant-modal-close {
+      top: 5px !important;
+      right: 5px !important;
+    }
+    .ant-modal-close-x {
+      width: 25px !important;
+      height: 25px !important;
+      line-height: 25px !important;
+      font-size: 13px !important;
+      &:hover {
+        background-color: @btnColor !important;
+        border-radius: 50% !important;
+        color: @whiteColor !important;
+      }
+    }
+  }
+  @media @sm {
+    top: -5px !important;
+    width: 100% !important;
+  }
+}
+.nameFeildRow {
+  display: flex;
+  align-items: center;
+  padding: @pixel 0px !important;
+  justify-content: space-between;
+}
+.coverModalGenderRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0px 5px 0px !important;
+}
+.coverModalSelect {
+  height: 40px !important;
+  :global {
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      width: 150px !important;
+      height: 40px !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      border-radius: 5px !important;
+      background-color: @whiteColor !important;
+      font-size: 16px !important;
+      margin: 0px 5px !important;
+    }
+  }
+}
+.coverSavetBtn {
+  margin-top: 20px;
+  width: 200px !important;
+  height: 40px !important;
+  color: @whiteColor !important;
+  border: none !important;
+  border-radius: 5px !important;
+  background-color: @btnColor !important;
+  font-weight: bold !important;
+  padding: 0px !important;
+  font-size: @pixel + 7px !important;
+  &:hover {
+    color: @whiteColor !important;
+    background-color: @btnHoverSave !important;
+  }
+  @media @md {
+    padding: 0px 10px !important;
+    font-size: @pixel + 6px !important;
+    height: @pixel + 30px !important;
+  }
+  @media @xs {
+    padding: 0px !important;
+    height: 30px !important;
+    font-size: @pixel + 2px !important;
+    width: 100px !important;
+  }
+}
+
+#coverFormModal {
+  width: 100% !important;
+  margin: 0px !important;
+  @media @xs {
+    margin: 20px 0px !important;
+  }
+}
+.aboutmeDatePicker {
+  height: 40px !important;
+  width: 100% !important;
+  border-radius: 5px !important;
+  :global {
+    .ant-picker-input > input {
+      font-size: @pixel + 6px !important;
+      @media @xs {
+        font-size: @pixel + 3px !important;
+      }
+    }
+  }
+  @media @xs {
+    height: 30px !important;
+  }
+}

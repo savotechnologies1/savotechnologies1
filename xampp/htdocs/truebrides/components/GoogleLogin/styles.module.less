@@ -1,0 +1,37 @@
+//Media Queries
+@xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+// End of Media Queries
+@pixels: 10px;
+@shadowColor: #ecc1c1;
+
+.googleLoginBtn {
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px !important;
+  font-weight: 400 !important;
+  &:hover {
+    box-shadow: 0px 0px 2px 3px @shadowColor;
+  }
+  @media @xs {
+    height: 35px !important;
+    font-size: @pixels + 4px !important;
+  }
+}
+.googleBtnLogo {
+  width: @pixels + 15px !important;
+  position: relative;
+  bottom: 2px;
+  margin: 0px 5px;
+  @media @xs {
+    width: 20px !important;
+  }
+}
+.signInGText {
+  padding-left: @pixels;
+}

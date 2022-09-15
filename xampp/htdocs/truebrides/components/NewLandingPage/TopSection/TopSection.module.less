@@ -1,0 +1,296 @@
+//Media Queries
+@lg: ~"(max-width: 1440px)"; //laptop large
+@lg1024: ~"(max-width: 1024px)"; // laptop
+@md: ~"(max-width: 768px)";
+@sm757: ~"(max-width: 757px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+@xs280:~ "(max-width: 280px)";
+// End of Media Queries
+
+@primaryColor: #d5232f;
+@pixels: 10px;
+@margin:0 !important;
+@textColor: #888080;
+@colorWhite: #fff;
+@grayColor: #999999;
+@borderGray: #d8d8d8;
+@shadowColor: #ecc1c1;
+@lineColor: #4e4c4c;
+
+.accountHeaderCol {
+  display: flex;
+  align-items: center;
+}
+.indexHeaderCol {
+  padding: 0px !important;
+  @media @lg {
+    padding: 0px !important;
+  }
+  @media @lg1024 {
+    padding: 0px !important;
+  }
+  @media (max-width: 764px) {
+    padding: 0px @pixels !important;
+  }
+  @media @sm757 {
+    padding: 0px @pixels !important;
+  }
+  @media @sm {
+    padding: 0px @pixels !important;
+  }
+  @media @xs {
+    padding: 0px @pixels !important;
+  }
+}
+.boxRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.boxCol {
+  padding: @pixels + 10px;
+  border: 1px solid @borderGray;
+  border-radius: @pixels - 5px;
+  background-color: @colorWhite;
+  margin: @pixels + 25px 0px;
+  @media @lg {
+    margin: @pixels + 15px 0px;
+  }
+  @media @lg1024 {
+    margin: @pixels 0px;
+  }
+  @media (max-width: 764px) {
+    margin-top: 0px;
+  }
+  @media @sm757 {
+    margin-top: 0px;
+  }
+  @media @xs {
+    margin-top: 0px;
+  }
+  @media @xs280 {
+    padding: @pixels;
+  }
+}
+.textParagraph {
+  font-size: @pixels+4px !important;
+  text-align: justify !important;
+  font-weight: 500 !important;
+  @media @lg {
+    font-size: @pixels + 3px !important;
+    display: flex;
+  }
+  @media @lg1024 {
+    font-size: @pixels + 3px !important;
+    display: flex;
+  }
+}
+.signupGTxt {
+  text-align: center;
+  padding-top: 10px;
+}
+.signInGText {
+  padding-left: @pixels;
+}
+.youareText {
+  text-align: center;
+  padding: @pixels + 10px 0px 0px 0px;
+  @media @md {
+    font-size: @pixels + 8px !important;
+  }
+  @media @xs {
+    font-size: @pixels + 8px !important;
+  }
+}
+.headerBtnCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headerBtnMaleFemale {
+  width: 60% !important;
+  margin: 0px 0px @pixels+2px 0px;
+  font-size: @pixels + 6px !important;
+  font-weight: bold;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: all 0s !important;
+  color: @grayColor;
+  border-radius: 5px !important;
+  &:hover {
+    box-shadow: 0px 0px 2px 3px @shadowColor;
+  }
+  @media @md {
+    height: 40px !important;
+    font-size: @pixels + 6px !important;
+  }
+  @media @xs {
+    width: 100% !important;
+    height: 35px !important;
+    font-size: @pixels + 4px !important;
+  }
+}
+.headerBtnMaleFemale-active {
+  width: 60% !important;
+  margin: 0px 0px @pixels+2px 0px;
+  font-size: @pixels + 6px !important;
+  font-weight: bold;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: all 0s !important;
+  color: @primaryColor;
+  box-shadow: 0px 0px 2px 3px @shadowColor;
+  border-color: @primaryColor;
+  border-radius: 5px !important;
+  @media @md {
+    height: 40px !important;
+    font-size: @pixels + 6px !important;
+  }
+  @media @xs {
+    width: 100% !important;
+    height: 35px !important;
+    font-size: @pixels + 4px !important;
+  }
+}
+.agesTitle {
+  text-align: center;
+  padding-top: @pixels !important;
+  @media @md {
+    font-size: @pixels + 8px !important;
+  }
+  @media @xs {
+    font-size: @pixels + 8px !important;
+  }
+}
+.fromToAgeRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.selectOptionRow {
+  display: flex;
+  align-items: center;
+  :global {
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      width: 70px !important;
+      height: 40px !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      border-radius: 5px !important;
+      background-color: @colorWhite !important;
+      font-size: 16px !important;
+      font-weight: 600;
+      @media @xs {
+        height: 30px !important;
+        font-size: @pixels + 4px !important;
+      }
+    }
+  }
+}
+.lineBetween {
+  background-color: @lineColor;
+  height: 2px;
+  width: @pixels + 15px;
+  margin: 0px @pixels;
+}
+.takechanceButton {
+  margin: @pixels+5px 0;
+  border-radius: 5px !important;
+  overflow: hidden !important;
+  &:hover {
+    box-shadow: 0px 0px 2px 3px @shadowColor;
+  }
+  @media @xs {
+    font-size: 14px !important;
+    height: 35px !important;
+  }
+}
+.genderButtonAvatar {
+  cursor: pointer;
+  margin-right: @pixels !important;
+  width: 25px !important;
+  height: 25px !important;
+  @media @md {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  @media @xs {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+.imgCol {
+  overflow: hidden !important;
+  text-align: right;
+  @media @xs {
+    overflow: auto;
+    text-align: center;
+  }
+}
+.headerCoupleImg {
+  width: 98%;
+  height: auto;
+  @media @xs {
+    margin-top: 1px;
+    margin-left: 0px;
+  }
+}
+.coupleAbsolute {
+  position: absolute;
+  width: 100%;
+  left: 55px;
+  top: 1px;
+  max-width: -webkit-fill-available;
+}
+.genderBtnSpan {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px 0px;
+  justify-content: center;
+  width: 50%;
+}
+
+@media (max-width: 320px) {
+  .boxRow {
+    margin-top: @pixels - 5px;
+  }
+  .coupleAbsolute {
+    top: 1px;
+    left: @pixels - 5px;
+  }
+}
+
+@media (max-width: 375px) {
+  .boxRow {
+    margin-top: @pixels - 5px;
+  }
+  .coupleAbsolute {
+    top: 1px;
+    left: @pixels - 5px;
+  }
+}
+@media (max-width: 425px) {
+  .boxRow {
+    margin-top: @pixels - 5px;
+  }
+  .coupleAbsolute {
+    top: 1px;
+    left: @pixels - 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerCoupleImg {
+    margin-left: 0px;
+  }
+  .coupleAbsolute {
+    left: 7px;
+  }
+}

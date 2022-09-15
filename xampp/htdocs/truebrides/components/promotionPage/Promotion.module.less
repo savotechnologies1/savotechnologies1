@@ -1,0 +1,588 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+// End of Media Queries
+
+@pixel: 10px;
+@shadowcolor:0px 0px 15px 5px #e9aeae;
+@bgColor: #f9f9f9;
+@color: #eedddd;
+
+.memRow {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  overflow: hidden;
+  @media @md {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  @media @xs {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+.arrowbtn {
+  position: absolute !important;
+  top: 30% !important;
+  z-index: 2;
+}
+.leftBtn {
+  left: -10% !important;
+  @media @md {
+    left: -20% !important;
+  }
+  @media @sm {
+    left: -20% !important;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    > .leftArrowBtn {
+      color: darken(@primary-color, 10%);
+    }
+  }
+}
+.rightBtn {
+  right: -10% !important;
+  @media @md {
+    right: -20% !important;
+  }
+  @media @sm {
+    right: -20% !important;
+    
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    > .rightArrowBtn {
+      color: darken(@primary-color, 10%);
+    }
+  }
+}
+.leftArrowBtnIcon {
+  color: @primary-color;
+  font-size: 32px;
+  font-weight: bold;
+  z-index: 2;
+}
+.rightArrowBtnIcon {
+  color: @primary-color;
+  font-size: 32px;
+  font-weight: bold;
+  z-index: 2;
+}
+.memberCard {
+  cursor: pointer;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+
+  @media @md {
+    padding: 20px;
+  }
+}
+
+
+.itemDiv-pr {
+  padding: 50px 17%;
+  position: relative;
+  @media (max-width: 767px) {
+    padding: 15px 5%;
+  }
+  @media (max-width: 400px) {
+    padding: 15px 5%;
+  }
+}
+
+.grid {
+  display: grid;
+  overflow: hidden;
+  cursor: pointer;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2px;
+  position: relative;
+  margin-top: 2px;  
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr 1fr;   
+  }
+ 
+}
+
+
+
+.grid2 {
+  cursor: pointer;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 2px;
+  position: relative; 
+  @media (max-width: 767px) {
+
+    grid-template-columns: 1fr ;   
+  }
+ 
+}
+.hide-image1{
+  @media (max-width: 767px) {
+   display: none;
+    
+  }
+
+}
+
+.ad{
+  position: absolute;
+    right: 11%;
+    top: 47%;  
+    background: #fff;
+    border: solid 1px #fff;
+    border-radius: 3px;     
+    @media (max-width: 767px) {
+      left: 22%;
+      top: 142%;
+      right: 70%;
+    }
+   
+  
+}
+
+
+
+.container-img {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #6a707294;
+}
+
+.container-img:hover .overlay {
+  opacity: 2;
+  
+}
+.hide-image{
+  opacity: 0;
+  height: 10px !important;
+    width: 10px !important;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  text-align: center; 
+  margin-top: 40%;
+  @media (max-width: 1024px) { 
+    font-size: 16px;
+    margin-top: 30%;
+    margin-bottom: 0;
+  }
+  @media (max-width: 767px) { 
+    font-size: 14px;
+    margin-top: 30%;
+    margin-bottom: 2px;
+  }
+  
+ 
+ 
+}
+.text .memberLocation{
+  color: white;
+  font-size: 20px;
+  @media (max-width: 767px) {  
+    font-size: 14px;
+  }
+ 
+}
+
+.chatnowBtn{
+   
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 20px;
+    background: #fff0 ;
+    border: solid #fff 1px;
+    border-radius: 20px ; 
+    @media (max-width: 1024px) {    
+      color: #fff;
+      font-size: 13px;
+      padding: 7px 15px;
+      
+    }   
+
+    @media (max-width: 700px) {    
+      color: #fff;
+      font-size: 13px;
+      padding: 7px 15px;
+      
+    }   
+
+
+}
+.video{
+  height: 100%;  
+}
+.memberCardImg-pr {  
+ 
+  width: 100% !important;
+  border-radius: 2px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  margin-bottom: 1px !important;
+  background-color: rgb(238, 221, 221) !important;
+ 
+}
+.cardSkeleton {
+  height: 200px !important;
+  width: 100% !important;
+  border-radius: @pixel + 5px !important;
+}
+.mainDiv {
+  background-color: @bgColor;
+  position: relative;
+}
+.memberClass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 20px;
+  overflow: hidden;
+}
+
+.memberLocation {
+  font-size: 16px !important;
+  @media @md {
+    font-size: @pixel+2px !important;
+  }
+  @media @xs {
+    font-size: @pixel+2px !important;
+  }
+}
+.slick-track {
+  transition-duration: 1s !important;
+}
+// CSS FOR ALICE CAROUSEL
+.alice-carousel .animated {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.alice-carousel .animated-out {
+  z-index: 1;
+}
+
+.alice-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.alice-carousel {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  direction: ltr;
+}
+
+.alice-carousel__wrapper {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+}
+
+.alice-carousel__stage {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  transform-style: flat;
+  -webkit-transform-style: flat;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.alice-carousel__stage-item {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  white-space: normal;
+  line-height: 0;
+}
+.alice-carousel__stage-item * {
+  line-height: initial;
+}
+.alice-carousel__stage-item.__hidden {
+  opacity: 0;
+  overflow: hidden;
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 10px 5px;
+}
+.alice-carousel__prev-btn [data-area]::after,
+.alice-carousel__next-btn [data-area]::after {
+  position: relative;
+  content: attr(data-area);
+  text-transform: capitalize;
+}
+
+.alice-carousel__prev-btn {
+  text-align: right;
+}
+
+.alice-carousel__prev-btn-item,
+.alice-carousel__next-btn-item {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0;
+  color: #465798;
+  font-size: 50px;
+}
+.alice-carousel__prev-btn-item:hover,
+.alice-carousel__next-btn-item:hover {
+  color: darkred;
+}
+.alice-carousel__prev-btn-item.__inactive,
+.alice-carousel__next-btn-item.__inactive {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.alice-carousel__play-btn {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  display: inline-block;
+}
+.alice-carousel__play-btn:hover {
+  cursor: pointer;
+}
+.alice-carousel__play-btn-wrapper {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.alice-carousel__play-btn-item {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.alice-carousel__play-btn-item::before,
+.alice-carousel__play-btn-item::after {
+  position: absolute;
+  pointer-events: none;
+  display: block;
+  width: 0;
+  height: 0;
+  content: "";
+  transition: all 0.4s linear;
+  border-width: 8px 0 8px 15px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: #465798;
+}
+.alice-carousel__play-btn-item::before {
+  left: 5px;
+  height: 14px;
+}
+.alice-carousel__play-btn-item::after {
+  top: 7px;
+  left: 18px;
+}
+.alice-carousel__play-btn-item.__pause::before,
+.alice-carousel__play-btn-item.__pause::after {
+  height: 30px;
+  border-width: 0 0 0 10px;
+}
+.alice-carousel__play-btn-item.__pause::after {
+  top: 0;
+  left: 18px;
+}
+
+.alice-carousel__dots {
+  margin: 30px 3px 5px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.alice-carousel__dots > li {
+  display: inline-block;
+}
+.alice-carousel__dots-item:not(.__custom) {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.alice-carousel__dots-item:not(.__custom):not(:last-child) {
+  margin-right: 20px;
+}
+.alice-carousel__dots-item:not(.__custom):hover,
+.alice-carousel__dots-item:not(.__custom).__active {
+  background-color: @primary-color;
+}
+
+.alice-carousel__slide-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+  padding: 5px 10px;
+  color: @primary-color;
+  border-radius: 5px;
+  background-color: rgba(224, 228, 251, 0.6);
+}
+.alice-carousel__slide-info-item {
+  vertical-align: middle;
+  line-height: 0;
+}
+
+
+
+.item {
+  min-height: 200px;
+  background-color: #eee;
+}
+.paginaMainRow{
+  width: 100%;
+  text-align: center;
+ 
+  
+}
+.pagination{
+  list-style-type: none;
+  margin: 15px auto;
+  width: 390px;
+}
+.pagination li{
+  display: inline-flex;
+}
+.page-item{
+  border: solid 1px #eee; 
+  padding: 10px 20px;
+  color: #000 !important;
+  background: #ddd;
+}
+.signUnBtn {
+  background: #ff230c;
+  border: solid 1px #ff230c;
+  color: #fff !important;
+  padding: 10px;
+  width: 235px;
+  border-radius: 20px;
+  margin-left: 37px;
+  
+}
+.first{
+  border-radius: 22px 0px 0px 22px;
+}
+.last{
+  border-radius: 0px 22px 22px 0px;
+}
+.page-link{
+  color: #000 !important;
+}
+.videoThumb {
+  width: 50%;
+  height: 301px;
+  // position: absolute;
+  // left: 25%;
+  border-radius: 0;
+  // top: 0px;
+  z-index: 1;
+}
+.memberCardImg2{
+  width: 25%;
+}
+
+.memberpagination{
+  width: 500px;
+  @media (max-width: 820px) {
+    width: 600px;
+    margin-left: 8em;
+   
+  }
+  @media (max-width: 767px) {
+    width: 300px;
+    margin-left: 0em;
+  }
+  @media (max-width: 400px) {
+    width: 300px;
+    margin-left: 0em;
+  }
+
+}
+.btnpginate{
+  background: #f9f9f6;
+  border: none;
+  cursor: pointer;
+}
+
+
+// END OF CSS FOR ALICE CAROUSEL

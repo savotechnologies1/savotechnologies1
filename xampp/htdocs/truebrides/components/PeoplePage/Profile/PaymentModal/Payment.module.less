@@ -1,0 +1,462 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@lg1: ~"(max-width: 1024px)"; // laptop
+@md: ~"(max-width: 768px)";
+@sm573: ~"(max-width: 573px)";
+@sm: ~"(max-width: 549px)";
+@xs: ~"(max-width: 425px)";
+@xs375: ~"(max-width: 375px)";
+@xs325: ~"(max-width: 325px)";
+@xs280: ~"(max-width: 280px)";
+// End of Media Queries
+@pixel: 10px;
+@color: #222;
+@color-2: #f76583;
+@whiteColor: #fff;
+@btnColor: @primary-color;
+.headerTextCol {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  justify-content: center;
+}
+.headerText {
+  font-size: @pixel + 15px !important;
+  color: @color !important;
+  @media @xs {
+    font-size: 18px !important;
+    text-align: center;
+  }
+}
+.greenBtn {
+  border-radius: 5px !important;
+  margin: @pixel + @pixel 0px @pixel 0px !important;
+}
+// Color variables (appears count calculates by raw css)
+@color0: #ff512f; // Appears 5 times
+@color1: #dd2476; // Appears 4 times
+@color2: #ff512f; // Appears 3 times
+@color3: #ff512f; // Appears 3 times
+
+// Width variables (appears count calculates by raw css)
+@width0: calc(33.3% - 30px); // Appears 2 times
+@width3: 100%; // Appears 2 times
+
+.pricingModal {
+  :global {
+    width: fit-content !important;
+    height: fit-content !important;
+    border-radius: 10px !important;
+    .ant-modal {
+      padding: 0px !important;
+      @media @xs {
+        width: 100% !important;
+      }
+    }
+    .ant-modal-content {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: max-content !important;
+      padding-bottom: 0px !important;
+      border-radius: 10px !important;
+      width: fit-content !important;
+      height: fit-content !important;
+      align-items: flex-start !important;
+      @media @xs {
+        padding: 20px 20px !important;
+        width: 100% !important;
+      }
+      @media @xs375 {
+        padding: @pixel + 5px 15px !important;
+      }
+    }
+    .ant-modal-mask {
+      background-color: rgba(0, 0, 0, 0.45) !important;
+      backdrop-filter: blur(6px) !important;
+    }
+    .ant-modal-body {
+      padding: 30px 40px !important;
+      width: 900px !important;
+      @media (max-width: 920px) {
+        width: fit-content !important;
+      }
+      @media @md {
+        padding: 25px 15px !important;
+      }
+      @media @xs {
+        padding: 0px !important;
+      }
+    }
+    .ant-modal-close {
+      top: 5px !important;
+      right: 5px !important;
+    }
+    .ant-modal-close-x {
+      width: 25px !important;
+      height: 25px !important;
+      line-height: 25px !important;
+      font-size: 13px !important;
+      &:hover {
+        background-color: @btnColor !important;
+        border-radius: 50% !important;
+        color: @whiteColor !important;
+      }
+    }
+  }
+  @media @sm {
+    top: -5px !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+h2 {
+  margin: 0;
+}
+.basic {
+  .pricing-header {
+    background-image: linear-gradient(to bottom, #dd2476, #ff512f);
+  }
+  .price-circle {
+    border: 10px solid @color0;
+    transition: all 0.4s;
+    @media @md {
+      border: 7px solid @color0;
+    }
+    @media @xs {
+      border: 5px solid @color0;
+    }
+  }
+  &:hover {
+    .price-circle {
+      border-width: 5px;
+    }
+  }
+}
+.eco {
+  .pricing-header {
+    background-image: linear-gradient(to bottom, #dd2476, #ff512f);
+  }
+  .price-circle {
+    border: 10px solid @color2;
+    transition: all 0.4s;
+    @media @md {
+      border: 7px solid @color0;
+    }
+    @media @xs {
+      border: 5px solid @color0;
+    }
+  }
+  &:hover {
+    .price-circle {
+      border-width: 5px;
+    }
+  }
+}
+.pro {
+  .pricing-header {
+    background-image: linear-gradient(to bottom, #dd2476, #ff512f);
+  }
+  .price-circle {
+    border: 10px solid @color3;
+    transition: all 0.4s;
+    @media @md {
+      border: 7px solid @color0;
+    }
+    @media @xs {
+      border: 5px solid @color0;
+    }
+  }
+  &:hover {
+    .price-circle {
+      border-width: 5px;
+    }
+  }
+}
+.business {
+  .pricing-header {
+    background-color: @color1;
+  }
+  .price-circle {
+    border: 10px solid @color1;
+    transition: all 0.4s;
+    @media @md {
+      border: 7px solid @color0;
+    }
+    @media @xs {
+      border: 5px solid @color0;
+    }
+  }
+  &:hover {
+    .price-circle {
+      border-width: 5px;
+    }
+  }
+}
+.payContainer {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  justify-content: center;
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.column {
+  z-index: 1000 !important;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  @media @xs {
+    padding: 10px 0px 10px 0px;
+  }
+}
+.pricing-card {
+  -moz-border-radius: 20px;
+  -ms-transition: 0.4s background-color ease;
+  -webkit-border-radius: 20px;
+  -webkit-transition: 0.4s background-color ease;
+  background-color: #fefefe;
+  border-radius: 20px;
+  height: 415px;
+  position: relative;
+  transition: 0.4s background-color ease;
+  transition: all 0.4s;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4);
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+  }
+  .popular {
+    background-color: #eb3b5a;
+    background: rgb(2, 0, 36);
+    r-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 12px;
+    padding: 10px;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    width: auto;
+    z-index: 1;
+  }
+  .badge-box {
+    margin-top: 80px;
+    padding: 0 40px;
+    @media @md {
+      margin-top: 70px;
+    }
+    @media @xs {
+      margin-top: 65px;
+    }
+    span {
+      border-radius: 25px;
+      border: 1px solid @color0;
+      color: @color0;
+      display: inline-block;
+      overflow: hidden;
+      padding: 4px 12px !important;
+      @media @md {
+        font-size: @pixel + 2px !important;
+        padding: 4px 10px !important;
+      }
+      @media @xs {
+        font-size: @pixel + 1px !important;
+        padding: 3px 8px !important;
+      }
+    }
+  }
+  .pricing-header {
+    -moz-border-radius: 20px 20px 0 0;
+    -webkit-border-radius: 20px 20px 0 0;
+    border-radius: 20px 20px 0 0;
+    height: 150px;
+    position: relative;
+    width: @width3;
+    @media @md {
+      height: 125px;
+    }
+    @media @xs {
+      height: 60px;
+    }
+    .plan-title {
+      color: white;
+      font-size: 24px;
+      position: relative;
+      top: 25%;
+      @media @md {
+        font-size: @pixel + 4px;
+      }
+    }
+    .price-circle {
+      background-color: white;
+      border-radius: 100%;
+      height: 120px;
+      left: 50%;
+      position: absolute;
+      top: 60%;
+      width: 120px;
+      transform: translateX(-50%);
+      @media @md {
+        height: 100px;
+        width: 100px;
+      }
+      @media @xs {
+        height: 80px;
+        width: 80px;
+      }
+      .info {
+        color: gray;
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .price-title {
+        display: block;
+        font-size: 28px;
+        font-weight: bold;
+        padding: 28px 0 0;
+        @media @md {
+          font-size: @pixel + 7px;
+          padding: 20px 0 0;
+        }
+        @media @xs {
+          font-size: @pixel + 4px;
+          padding: 13px 0 0;
+        }
+        small {
+          font-size: 18px;
+        }
+      }
+    }
+    h2 {
+      color: #ffffff;
+      position: relative;
+      top: 40%;
+    }
+  }
+  ul {
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    @media @md {
+      margin: 5px 0px 0px 0px;
+    }
+    li {
+      border-bottom: 1px solid #f2f2f2;
+      display: block;
+      list-style-type: none;
+      margin: 0px;
+      padding: 15px 0px 15px 0px;
+      @media @md {
+        padding: 5px 0px 5px 0px;
+        font-size: @pixel + 3px !important;
+      }
+      @media @xs {
+        padding: 2px 0px 2px 0px;
+        font-size: @pixel + 1px !important;
+      }
+    }
+  }
+
+  @media @md {
+    height: 340px;
+  }
+  @media @xs {
+    height: 235px;
+  }
+}
+.pay_here_text {
+  padding-bottom: 10px;
+}
+.input_class_number {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+.slash_class {
+  padding: 0px 5px;
+  font-size: 25px !important;
+}
+.cvv_class {
+  padding: 0px 5px;
+}
+.credit_text_class {
+  text-align: center;
+  @media @xs {
+    font-size: 11px !important;
+  }
+}
+.subscribe_class {
+  border-radius: 5px !important;
+}
+.buynow {
+  width: 100% !important;
+  margin-bottom: 15px;
+  border-radius: 20px !important;
+  background-color: black !important;
+  color: #fff !important;
+  &:hover {
+    background-color: @color0 !important;
+    background-image: none !important;
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+  }
+  @media @sm {
+    font-size: 12px !important;
+  }
+}
+.paymentTitle {
+  text-align: center;
+  @media @sm {
+    font-size: 18px !important;
+  }
+}
+.priceTag {
+  font-size: 20px !important;
+  margin-bottom: 0px !important;
+}
+.cardStyle {
+  border-radius: 5px;
+  border: 0.5px solid #ccc;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    background-color: #eee !important;
+    color: @whiteColor !important;
+  }
+}
+.tickTitleDiv {
+  border-bottom: 0.5px solid #ccc;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.paymentCards {
+  width: 55px;
+  height: 35px;
+  border-radius: 5px;
+  border: 0.5px solid #eee;
+  padding: 0px 5px;
+  margin: 5px;
+  @media @xs375 {
+    width: 45px;
+    height: 30px;
+  }
+  @media @xs325 {
+    margin: 2px;
+  }
+}
+.verotelLink {
+  text-decoration: underline;
+  cursor: pointer;
+  color: @btnColor;
+}
+.mobileFont {
+  @media @sm {
+    font-size: 12px;
+  }
+}

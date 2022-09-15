@@ -1,0 +1,284 @@
+//Media Queries
+@xl: ~"(max-width: 1440px)";
+@lg1024: ~"(max-width: 1024px)";
+@lg: ~"(max-width: 991px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+// End of Media Queries
+
+@pixel: 10px;
+@onlineIconColor: #009f83;
+
+//Overridden Styles
+.tableCol {
+  width: 100%;
+  :global {
+    span.label {
+      display: none;
+    }
+    .ant-table-body {
+      width: 100% !important;
+      height: 615px !important;
+    }
+    .ant-pagination {
+      padding-top: 15px !important;
+      padding-bottom: 15px !important;
+      padding-right: 15px !important;
+      margin: 0px !important;
+      border-top: 0.5px solid #eee;
+    }
+    .ant-table-cell {
+      padding: 15px 10px !important;
+      @media @lg1024 {
+        padding: 16px 10px !important;
+        font-size: 14px !important;
+      }
+      @media @md {
+        padding: 16px 16px !important;
+        font-size: 14px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      tr.ant-table-row {
+        position: relative;
+        margin-bottom: 10px;
+        border-width: 1px 1px 0px;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-left-style: solid;
+        border-top-color: rgb(233, 233, 233);
+        border-right-color: rgb(233, 233, 233);
+        border-left-color: rgb(233, 233, 233);
+        border-image: initial;
+        border-bottom-style: initial;
+        border-bottom-color: initial;
+        box-shadow: 1px 1px 3px rgb(223, 223, 223);
+      }
+      thead.ant-table-thead {
+        display: none;
+      }
+      .ant-table-body {
+        overflow-x: hidden !important;
+      }
+      .ant-table-tbody {
+        > tr > td {
+          display: inline-block;
+          width: 50%;
+          min-width: 50%;
+          vertical-align: bottom;
+          white-space: nowrap;
+          text-align: left;
+        }
+      }
+      span.label {
+        display: block;
+        padding: 0px 10px 0px 0px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      span.mobile-lbl-val {
+        display: block;
+        white-space: nowrap;
+        min-width: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+.open_contactRow {
+  width: 100%;
+  border: 0.5px solid #eee;
+  border-radius: 10px;
+  border-top: 0px;
+  :global {
+    .ant-divider-horizontal {
+      margin: 15px 0 0px !important;
+    }
+    .ant-table-thead {
+      font-size: 16px !important;
+      padding: 0px 16px !important;
+      @media @xs {
+        font-size: @pixel + 4px !important;
+        padding: @pixel 0px !important;
+      }
+    }
+    @media (max-width: 1024px) {
+      tr.ant-table-row {
+        position: relative;
+        margin-bottom: 10px;
+        border-width: 1px 1px 0px;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-left-style: solid;
+        border-top-color: rgb(233, 233, 233);
+        border-right-color: rgb(233, 233, 233);
+        border-left-color: rgb(233, 233, 233);
+        border-image: initial;
+        border-bottom-style: initial;
+        border-bottom-color: initial;
+        box-shadow: 1px 1px 3px rgb(223, 223, 223);
+      }
+      thead.ant-table-thead {
+        display: none;
+      }
+      .ant-table-body {
+        overflow-x: hidden !important;
+      }
+      .ant-table-tbody {
+        > tr > td {
+          display: inline-block;
+          width: 50%;
+          min-width: 50%;
+          vertical-align: bottom;
+          white-space: nowrap;
+          text-align: left;
+        }
+      }
+      span.label {
+        display: block;
+        padding: 0px 10px 0px 0px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      span.mobile-lbl-val {
+        display: block;
+        white-space: nowrap;
+        min-width: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+.contact_table_col {
+  border: 1px solid #eee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #fff;
+  border-top: 0px;
+  height: fit-content;
+  min-height: calc(78vh - 100px);
+  @media @lg1024 {
+    min-height: calc(80vh - 126px);
+  }
+  @media @md {
+    min-height: calc(80vh - 190px);
+  }
+  @media (max-width: 567px) {
+    min-height: calc(75vh - 190px);
+  }
+}
+.table_col_avatar {
+  display: flex;
+  align-items: center;
+  @media @md {
+    display: block;
+  }
+}
+.table_contact_avatar {
+  display: flex;
+  align-items: center;
+}
+.table_avatar_div {
+  cursor: pointer;
+}
+.tableNameCol {
+  display: flex;
+  flex: 1;
+  flex-grow: 0;
+  justify-content: center;
+  align-items: center;
+  @media @md {
+    font-size: @pixel + @pixel !important;
+  }
+  @media @xs {
+    padding-left: 15px !important;
+  }
+}
+.eyeClickCol {
+  @media @xs {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.contactTableRow {
+  width: 100%;
+  :global {
+    .ant-divider-horizontal {
+      margin: 15px 0 0px !important;
+    }
+    .ant-table-thead {
+      font-size: 16px !important;
+      padding: 0px 16px !important;
+      @media @xs {
+        font-size: @pixel + 4px !important;
+        padding: @pixel 13px !important;
+      }
+    }
+  }
+}
+.onlineCircleRequest {
+  position: absolute;
+  bottom: -2px;
+  font-size: 12px;
+  color: #009f83;
+  background-color: #009f83;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  left: 30px;
+  @media @xl {
+    bottom: 0px;
+  }
+  @media @md {
+    bottom: 0px;
+    left: 32px;
+  }
+}
+.offlineCircleRequest {
+  position: absolute;
+  bottom: -2px;
+  color: rgba(128, 128, 128, 0.9);
+  background-color: rgba(128, 128, 128, 0.9);
+
+  font-size: 12px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  left: 30px;
+  @media @xl {
+    bottom: 0px;
+  }
+  @media @md {
+    bottom: 0px;
+    left: 32px;
+  }
+}
+.contact_avatar_img {
+  margin-right: 10px;
+  height: 44px;
+  width: 44px;
+}
+.date_avatar_img {
+  margin-right: 10px;
+  height: 44px;
+  width: 63px;
+  @media @xl {
+    width: 63px;
+  }
+  @media (max-width: 1366px) {
+    height: 40px;
+  }
+  @media @lg1024 {
+    width: 80px;
+    height: 40px;
+  }
+  @media @lg {
+    width: 44px;
+    height: 44px;
+  }
+}

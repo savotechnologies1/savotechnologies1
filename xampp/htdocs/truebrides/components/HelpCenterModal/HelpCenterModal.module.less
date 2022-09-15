@@ -1,0 +1,90 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@lg1024: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+@xs375: ~"(max-width: 375px)";
+@xs320: ~"(max-width: 320px)";
+// End of Media Queries
+
+@color: #d5232f;
+@pixel: 10px;
+@whiteColor: #fff;
+@btnColor: @primary-color;
+@onlineColor: #1faa59;
+
+.class_div {
+  display: flex;
+  flex-direction: column;
+}
+.pages_title {
+  font-size: 30px;
+  color: @color !important;
+}
+.static_pages_modal {
+  width: fit-content !important;
+  height: fit-content !important;
+  border-radius: 10px !important;
+  .ant-modal {
+    padding: 0px !important;
+    @media @xs {
+      width: 100% !important;
+    }
+  }
+  .ant-modal-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: max-content !important;
+    border-radius: 10px !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    align-items: flex-start !important;
+    padding: 1.5rem;
+    @media @md {
+      width: auto !important;
+    }
+  }
+  .ant-modal-mask {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+  & .ant-modal-body {
+    padding: 0px !important;
+    overflow: hidden;
+    width: 500px !important;
+    @media @md {
+      width: calc(100vw - 40px) !important;
+    }
+    @media @sm {
+      max-width: calc(100vw - 20px) !important;
+      width: 100vw !important;
+    }
+    @media @xs {
+      max-width: calc(100vw - 20px) !important;
+      width: 100vw !important;
+    }
+  }
+  .ant-modal-close {
+    top: 5px !important;
+    right: 5px !important;
+  }
+  .ant-modal-close-x {
+    width: 25px !important;
+    height: 25px !important;
+    line-height: 25px !important;
+    font-size: 13px !important;
+    &:hover {
+      background-color: @btnColor !important;
+      border-radius: 50% !important;
+      color: @whiteColor !important;
+    }
+  }
+  @media @xs {
+    top: -5px !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

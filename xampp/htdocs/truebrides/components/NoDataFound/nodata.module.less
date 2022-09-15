@@ -1,0 +1,45 @@
+//Media Queries
+@lg: ~"(max-width: 1440px)";
+@md: ~"(max-width: 1200px)";
+@sm: ~"(max-width: 900px)";
+@xs: ~"(max-width: 575px)";
+// End of Media Queries
+
+@pixel: 10px;
+
+.imgStyle {
+  width: 100px;
+}
+.h4 {
+  color: #264653;
+  font-size: 20px;
+  text-align: center;
+  @media @sm {
+    font-size: 20px;
+  }
+  @media @xs {
+    font-size: 16px;
+  }
+}
+.fullContainer {
+  width: 100%;
+  padding: 2rem;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100vh;
+}
+.text {
+  margin: 2rem auto;
+  text-align: center;
+}
+.homeGoBtn {
+  margin-top: 40px;
+  @media @xs {
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 0px 7px !important;
+    height: 30px;
+  }
+}

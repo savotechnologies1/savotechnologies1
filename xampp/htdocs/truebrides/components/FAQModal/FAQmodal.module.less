@@ -1,0 +1,146 @@
+//Media Queries
+@xl: ~"(max-width: 1199px)";
+@lg1024: ~"(max-width: 1024px)";
+@lg: ~"(max-width: 991px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 480px)";
+// End of Media Queries
+
+@color: #d5232f;
+
+.privacy_title_text {
+  cursor: pointer;
+  font-size: 16px;
+  @media @xs {
+    font-size: 14px;
+  }
+}
+.privacy_colleft_class {
+  height: fit-content;
+  position: sticky;
+  top: 0px;
+}
+.helpcenter_title_row {
+  margin-bottom: 25px;
+}
+.privacy_modal_col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+  :global {
+    .ant-collapse-header {
+      background-color: #f8f8f8 !important;
+    }
+  }
+}
+.privacy_pages_title {
+  font-size: 30px;
+  color: @color !important;
+  font-weight: 700 !important;
+  line-height: 1;
+  @media (max-width: 700px) {
+    font-size: 25px;
+  }
+}
+.title_row {
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 6px 2px rgba(223, 19, 19, 90%) !important;
+}
+.privacymodal_class {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  :global {
+    .ant-modal-content {
+      padding: 30px 20px !important;
+      border-radius: 10px !important;
+      width: 900px !important;
+      background-color: #fff !important;
+      @media (max-width: 920px) {
+        width: 700px !important;
+      }
+      @media (max-width: 700px) {
+        width: 600px !important;
+      }
+      @media (max-width: 600px) {
+        width: 500px !important;
+      }
+      @media @xs {
+        width: 100% !important;
+        top: -75px !important;
+      }
+    }
+    .ant-modal-close {
+      top: 5px !important;
+      right: 5px !important;
+    }
+    .ant-modal-close-x {
+      width: 25px !important;
+      height: 25px !important;
+      line-height: 30px !important;
+      font-size: 12px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background-color: @color !important;
+        border-radius: 50% !important;
+        color: #fff !important;
+      }
+    }
+    .ant-modal-body {
+      padding: 10px !important;
+      max-height: 100% !important;
+      overflow: auto !important;
+      overflow-x: hidden !important;
+      background: #fff !important;
+      @media (max-width: 615px) {
+        max-height: fit-content !important;
+      }
+    }
+  }
+}
+.privacy_row_class {
+  display: flex;
+  @media @xs {
+    flex-direction: column;
+  }
+}
+.faqFooterRow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stillQue {
+  font-size: 18px;
+}
+.faqTxt {
+  font-size: 13px;
+  text-align: center;
+}
+.iconsDiv {
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 49%;
+  flex-direction: column;
+  padding: 20px 5px;
+  min-height: 125px;
+}
+.faqIconsRow {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.collapseClass {
+  margin-bottom: 10px;
+}

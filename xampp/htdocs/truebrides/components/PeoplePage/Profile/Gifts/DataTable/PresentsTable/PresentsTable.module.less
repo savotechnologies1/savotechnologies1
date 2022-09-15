@@ -1,0 +1,46 @@
+//Media Queries
+@xl: ~"(max-width: 1440px)";
+@lg1024: ~"(max-width: 1024px)";
+@lg: ~"(max-width: 991px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+// End of Media Queries
+
+@pixel: 10px;
+@onlineIconColor: #009f83;
+
+.presentTableRow {
+  width: 100%;
+  :global {
+    .ant-divider-horizontal {
+      margin: 15px 0 0px !important;
+    }
+    .ant-table-thead {
+      font-size: 16px !important;
+      padding: 0px 16px !important;
+      @media @xs {
+        font-size: @pixel + 4px !important;
+        padding: @pixel 13px !important;
+      }
+    }
+  }
+}
+.present_table_col {
+  border: 1px solid #eee;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: #fff;
+  border-top: 0px;
+  height: fit-content;
+  min-height: calc(83vh - 100px);
+  @media @lg1024 {
+    min-height: calc(85vh - 126px);
+  }
+  @media @md {
+    min-height: calc(85vh - 190px);
+  }
+  @media (max-width: 567px) {
+    min-height: calc(80vh - 190px);
+  }
+}

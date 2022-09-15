@@ -1,0 +1,74 @@
+//Media Queries
+@xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+// End of Media Queries
+
+@white_color: #fff;
+@layoutBackgroundColor: #f9f9f9;
+@headerHeight: 87px;
+@smHeader: 64px;
+@txtColor: #222;
+
+body {
+  background-color: @layoutBackgroundColor !important;
+}
+.verify_mainBody {
+  background-color: @layoutBackgroundColor;
+}
+.verify_container {
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 50px 45px;
+  @media @sm {
+    padding: 20px 25px;
+  }
+  @media @xs {
+    padding: 20px 13px;
+  }
+}
+.verify_noticeText {
+  font-size: 18px;
+  margin: 8px auto;
+  @media @sm {
+    font-size: 16px;
+  }
+  @media @xs {
+    font-size: 14px;
+  }
+}
+.verify_noticeTitle {
+  @media @sm {
+    font-size: 20px !important;
+  }
+}
+.confirmEmailLogo {
+  height: 60px;
+  width: 60px;
+  margin-bottom: 20px;
+  font-size: 60px;
+}
+.errorLogo {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.spinner {
+  margin-bottom: 16px;
+}
+.resendBtn {
+  border-radius: 5px;
+  margin-top: 16px;
+}
+a {
+  display: contents;
+}
+.verify_modal_class {
+  :global {
+    .ant-modal-content {
+      border-radius: 10px !important;
+    }
+  }
+}

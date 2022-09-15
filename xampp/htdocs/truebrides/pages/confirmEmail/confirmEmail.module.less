@@ -1,0 +1,64 @@
+//Media Queries
+@xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+// End of Media Queries
+
+@white_color: #fff;
+@layoutBackgroundColor: #f9f9f9;
+@headerHeight: 87px;
+@smHeader: 64px;
+@txtColor: #222;
+
+body {
+  background-color: @layoutBackgroundColor !important;
+}
+.mainBody {
+  background-color: @layoutBackgroundColor;
+  height: calc(100vh - 87px);
+}
+.verificationContainer {
+  background-color: @white_color;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 50px 45px;
+  @media @sm {
+    padding: 20px 25px;
+  }
+}
+.noticeText {
+  font-size: 18px;
+  margin: 8px auto;
+  @media @sm {
+    font-size: 16px;
+  }
+}
+.noticeTitle {
+  @media @sm {
+    font-size: 22px !important;
+  }
+}
+.confirmEmailLogo {
+  height: 60px;
+  width: 60px;
+  margin-bottom: 20px;
+  font-size: 60px;
+}
+.errorLogo {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.spinner {
+  margin-bottom: 16px;
+}
+.resendBtn {
+  border-radius: 5px;
+  margin-top: 16px;
+}
+a {
+  display: contents;
+}

@@ -1,0 +1,281 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@lg1024: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+@xs320: ~"(max-width: 320px)";
+// End of Media Queries
+
+@pixel: 10px;
+@bgColorRgb: rgba(0, 0, 0, 0.5);
+@hoverColor: rgba(0, 0, 0, 0.8);
+@bgColor: #3b5998;
+@hover: #4468a5;
+@hoverWhite: #e8e8e8;
+@white: #fff;
+@textColor: #323232;
+@color: #222;
+@lightBg: @hoverWhite;
+@iconColor: #d5232f;
+@hoverRed: #e3494e;
+
+.lightboxWrapper {
+  & .ril__navButtons {
+    display: none !important;
+  }
+}
+.addPhotosRow {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  padding: 5px 0px 0px 10px;
+  margin-right: 0px !important;
+  :global {
+    .ant-popover-inner-content {
+      border-radius: @pixel !important;
+      overflow: hidden !important;
+      padding: 10px !important;
+    }
+    .ant-popover-content {
+      margin: 0px 25px !important;
+    }
+  }
+  @media @xs {
+    padding: 10px 0px 0px 5px !important;
+  }
+}
+.addPhotoBtn {
+  background-color: @bgColorRgb !important;
+  color: @white !important;
+  border: none !important;
+  padding: 0px 25px !important;
+  border-radius: 5px !important;
+  &:hover {
+    background-color: @hoverColor !important;
+    color: @white !important;
+    border-color: @hoverColor !important;
+  }
+  @media @lg {
+    padding: 5px 10px !important;
+    font-size: @pixel + 2px !important;
+  }
+  @media @xs {
+    font-size: @pixel + 2px !important;
+  }
+}
+.menuOnPhoto {
+  font-size: 20px !important;
+  position: absolute !important;
+  z-index: 5 !important;
+  right: 4px !important;
+  top: 4px !important;
+  color: @white !important;
+  border-radius: 50% !important;
+  padding: 3px !important;
+  cursor: pointer !important;
+  transition: all 0.5s;
+  &:hover {
+    background-color: @hoverRed !important;
+  }
+}
+.myPrivacyIndicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  font-size: 20px;
+  z-index: 1;
+  > svg {
+    fill: #fff;
+  }
+}
+.othersPrivacyIndicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  > svg {
+    fill: @hoverWhite;
+  }
+}
+.lightboxPvtImage {
+  & .ril-image-current {
+    filter: blur(50px);
+  }
+  & .lightboxCustomDiv {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    & .lockedText {
+      color: @white !important;
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 2rem;
+    }
+  }
+}
+.conetentImg {
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:hover {
+    filter: brightness(0.8);
+  }
+  &-othersPrivateImage {
+    filter: blur(10px);
+    &:hover {
+      filter: blur(10px) brightness(0.8);
+    }
+  }
+}
+.addPhotoImg {
+  background-color: #fff;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 0.5px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.addPhotoImgCover {
+  width: 100%;
+  height: 0;
+  background-color: @lightBg;
+  border-radius: 10px;
+  position: relative;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+.addPhotoText {
+  font-size: @pixel + 8px !important;
+  font-weight: bold !important;
+  color: @color !important;
+  padding: 0px !important;
+  margin-top: 100% !important;
+  margin-bottom: 15px !important;
+  @media @lg {
+    font-size: @pixel + 4px !important;
+  }
+  @media @md {
+    font-size: @pixel + 3px !important;
+  }
+  @media @xs {
+    font-size: @pixel + 2px !important;
+  }
+}
+.rowDivPop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  width: 100% !important;
+  margin: 0px 0px !important;
+}
+.fbIconBtn {
+  font-size: @pixel + 10px !important;
+  @media @xs {
+    font-size: @pixel + 5px !important;
+  }
+}
+
+.takephotoBtn {
+  background-color: @white;
+  color: @textColor !important;
+  font-weight: bold !important;
+  height: @pixel + 45px !important;
+  width: 100% !important;
+  border: none !important;
+  border-radius: 0px !important;
+  border: 0.5px solid #eee !important;
+  &:hover {
+    background-color: @hoverWhite;
+    color: @textColor !important;
+  }
+  @media @xs {
+    font-size: @pixel + 3px !important;
+    height: 40px !important;
+    padding: 5px 10px !important;
+  }
+  @media @xs320 {
+    font-size: @pixel + 2px !important;
+  }
+}
+.clickPopOver {
+  z-index: 10 !important;
+  :global {
+    .ant-popover {
+      z-index: 10 !important;
+    }
+    .ant-popover-arrow {
+      display: block !important;
+      background: @white !important;
+    }
+  }
+}
+.clickPop {
+  :global {
+    .ant-popover-content {
+      background: @white !important;
+      border-radius: 5px !important;
+      padding-bottom: 0px !important;
+    }
+    .ant-popover-arrow {
+      display: block !important;
+    }
+    .ant-popover-inner {
+      padding: 5px 10px !important;
+    }
+  }
+}
+.webCamButtonWrapper {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 10px;
+  z-index: 5;
+  padding: 10px;
+  display: flex;
+}
+.webCamButton {
+  background-color: @hoverRed;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.webCamButtonIcon {
+  font-size: 28px;
+  color: white;
+}
+
+//Overridden style
+.ant-popover-inner {
+  background-color: @white;
+  border-radius: 5px !important;
+  overflow: hidden !important;
+}

@@ -1,0 +1,167 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@lg1024: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+@xs375: ~"(max-width: 375px)";
+@xs320: ~"(max-width: 320px)";
+// End of Media Queries
+
+@pixel: 10px;
+@color: #222;
+@white: #fff;
+@borderColor: #ccc;
+@iconColor: #4e4e4e;
+@primaryColor: #d5232f;
+
+.rowMyInterests {
+  background-color: #fff;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: fit-content !important;
+  transition: all 0.5s !important;
+  overflow: hidden;
+  border: 0.5px solid #eee !important;
+}
+.siderShowBtn {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border: 1px solid !important;
+  border-radius: 20px !important;
+  height: 25px !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: all 0.5s !important;
+  @media (max-width: 1550px) {
+    font-size: 12px !important;
+    padding: 0px 5px !important;
+  }
+  @media @lg {
+    font-size: @pixel + 2px !important;
+  }
+  @media @xs {
+    padding: 0px 10px !important;
+    font-size: @pixel + 2px !important;
+  }
+  @media @xs375 {
+    padding: 0px 5px !important;
+    font-size: @pixel !important;
+    height: @pixel + @pixel !important;
+  }
+}
+.contentdataCol {
+  padding: @pixel @pixel + 5px;
+  @media @lg {
+    padding: @pixel 10px !important;
+  }
+  @media @md {
+    padding: 10px 5px !important;
+  }
+  @media @sm {
+    padding: @pixel + 5px !important;
+  }
+}
+.titleIconDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.interestsDataDiv {
+  padding: 5px;
+  margin: 2px;
+  width: fit-content;
+  border-radius: 20px;
+  @media @lg {
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+}
+.spanBtnIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.interestRowData {
+  padding: 0px 10px 0px 0px;
+  font-size: 16px !important;
+  width: 90%;
+  @media (max-width: 1550px) {
+    font-size: 14px !important;
+  }
+  @media @lg1024 {
+    font-size: 14px !important;
+  }
+  @media @xs {
+    font-size: 12px !important;
+  }
+}
+.MyinterestsItem {
+  padding: 5px 10px;
+  margin: 4px;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 20px;
+  &:hover {
+    background-color: @white;
+  }
+  &-active,
+  &-active:hover {
+    i {
+      color: @white;
+    }
+    background-color: @primary-color;
+  }
+  @media @xs {
+    padding: 5px 5px !important;
+  }
+}
+.skeletonButton {
+  border-radius: 25px !important;
+  width: 70px !important;
+  height: 30px !important;
+  margin: 5px 5px 5px 0px !important;
+  @media @lg {
+    width: 70px !important;
+    height: 30px !important;
+  }
+  @media @xs {
+    width: 73px !important;
+  }
+}
+.myInterestsRow {
+  padding: 0 10px;
+  font-size: 16px;
+  width: 650px !important;
+  max-width: 100% !important;
+  &-active {
+    color: @white !important;
+  }
+  @media @md {
+    font-size: @pixel + 4px;
+  }
+  @media @xs {
+    padding: 0px !important;
+    font-size: @pixel + 3px !important;
+  }
+  @media @xs320 {
+    font-size: @pixel + 3px !important;
+  }
+}
+#myinterestForm {
+  width: 100% !important;
+  @media @md {
+    width: 500px !important;
+  }
+  @media @xs {
+    width: 350px !important;
+  }
+  @media @xs375 {
+    width: 315px !important;
+  }
+  @media @xs320 {
+    width: 285px !important;
+  }
+}

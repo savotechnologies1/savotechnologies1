@@ -1,0 +1,321 @@
+//Media Queries
+@xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 991px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+// End of Media Queries
+
+@pixel: 10px;
+@redcolor: #d5232f;
+@whiteColor: #fff;
+@btnColor: #d5232f;
+@onlineColor: #1faa59;
+
+.dateTableRow {
+  width: 100%;
+  border: 0.5px solid #eee;
+  border-radius: 10px;
+  border-top: 0px;
+  :global {
+    .ant-divider-horizontal {
+      margin: 15px 0 0px !important;
+    }
+    .ant-table-thead {
+      font-size: 16px !important;
+      padding: 0px 16px !important;
+      @media @xs {
+        font-size: @pixel + 4px !important;
+        padding: @pixel 13px !important;
+      }
+    }
+  }
+}
+.check_btn {
+  padding: 0px !important;
+  color: #fff !important;
+  background: green !important;
+  border-radius: 5px !important;
+  border-color: green !important;
+}
+.cancel_btn {
+  margin: 0px 5px !important;
+  padding: 0px !important;
+  color: #fff !important;
+  background: @redcolor !important;
+  border-radius: 5px !important;
+}
+.rescheduled_btn {
+  border-radius: 5px !important;
+  font-size: 11px;
+  padding: 0px 5px;
+  height: 25px;
+  border-color: @redcolor !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  :global {
+    .anticon {
+      line-height: 0 !important;
+    }
+    span {
+      margin-left: 0px !important;
+    }
+  }
+}
+.onlineCircleDate {
+  position: absolute;
+  bottom: -2px;
+  color: #009f83;
+  font-size: 12px;
+  background-color: #009f83;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  left: 30px;
+  @media @xl {
+    bottom: 0px;
+  }
+  @media @md {
+    bottom: 42px;
+    left: 32px;
+  }
+}
+.offlineCircleDate {
+  position: absolute;
+  bottom: -2px;
+  font-size: 12px;
+  color: rgba(128, 128, 128, 0.9);
+  background-color: rgba(128, 128, 128, 0.9);
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  left: 30px;
+  @media @xl {
+    bottom: 0px;
+  }
+  @media @md {
+    bottom: 42px;
+    left: 32px;
+  }
+}
+.open_dateRow {
+  width: 100%;
+  border: 0.5px solid #eee;
+  border-radius: 10px;
+  border-top: 0px;
+  :global {
+    .ant-divider-horizontal {
+      margin: 15px 0 0px !important;
+    }
+    .ant-table-thead {
+      font-size: 16px !important;
+      padding: 0px 16px !important;
+      @media @xl {
+        font-size: @pixel + 5px !important;
+        padding: @pixel 13px !important;
+      }
+      @media @xs {
+        font-size: @pixel + 4px !important;
+        padding: @pixel 0px !important;
+      }
+      > tr > th {
+        padding: 10px !important;
+      }
+    }
+    .ant-table-tbody > tr > td {
+      padding: 10px !important;
+    }
+    @media (max-width: 1024px) {
+      tr.ant-table-row {
+        position: relative;
+        margin-bottom: 10px;
+        border-width: 1px 1px 0px;
+        border-top-style: solid;
+        border-right-style: solid;
+        border-left-style: solid;
+        border-top-color: rgb(233, 233, 233);
+        border-right-color: rgb(233, 233, 233);
+        border-left-color: rgb(233, 233, 233);
+        border-image: initial;
+        border-bottom-style: initial;
+        border-bottom-color: initial;
+        box-shadow: 1px 1px 3px rgb(223, 223, 223);
+      }
+      thead.ant-table-thead {
+        display: none;
+      }
+      .ant-table-body {
+        overflow-x: hidden !important;
+      }
+      .ant-table-tbody {
+        > tr > td {
+          display: inline-block;
+          width: 50%;
+          min-width: 50%;
+          vertical-align: bottom;
+          white-space: nowrap;
+          text-align: left;
+        }
+      }
+      span.label {
+        display: block;
+        padding: 0px 10px 0px 0px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      span.mobile-lbl-val {
+        display: block;
+        white-space: nowrap;
+        min-width: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+.name_text_date {
+  overflow: hidden !important;
+  width: 100%;
+}
+.tableNameCol {
+  @media @md {
+    font-size: @pixel + @pixel !important;
+  }
+}
+.approve_text {
+  font-size: 20px;
+  @media @xs {
+    font-size: 16px;
+  }
+}
+.line_div {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 15px 0px;
+  margin: 10px 0px;
+}
+.new_data_col {
+  display: flex;
+  flex-direction: column;
+}
+.initial_text {
+  font-size: 14px;
+  @media @xs {
+    font-size: 13px;
+  }
+}
+.confirm_txt {
+  font-size: 14px;
+  @media @xs {
+    font-size: 13px;
+  }
+}
+.new_data {
+  font-size: 14px;
+  @media @xs {
+    font-size: 13px;
+  }
+}
+.new_place {
+  font-size: 14px;
+  @media @xs {
+    font-size: 12px;
+  }
+}
+.flex_div {
+  display: flex;
+  align-items: center;
+  padding: 15px 0px;
+}
+.approve_btn {
+  background-color: green !important;
+  color: #fff !important;
+  border-radius: 5px !important;
+  margin-right: 10px !important;
+  @media @xs {
+    font-size: 12px;
+    padding: 0px 10px;
+    height: 30px;
+  }
+}
+.reject_btn {
+  margin-left: 10px;
+  color: #fff !important;
+  border-radius: 5px !important;
+  @media @xs {
+    font-size: 12px;
+    padding: 0px 10px;
+    height: 30px;
+  }
+}
+
+.request_modal_settings {
+  width: fit-content !important;
+  height: fit-content !important;
+  border-radius: 10px !important;
+  .ant-modal {
+    padding: 0px !important;
+    @media @xs {
+      width: 100% !important;
+    }
+  }
+  .ant-modal-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: max-content !important;
+    border-radius: 10px !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    align-items: flex-start !important;
+    padding: 1.5rem;
+    @media @md {
+      width: auto !important;
+    }
+  }
+  .ant-modal-mask {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    backdrop-filter: blur(6px) !important;
+  }
+  & .ant-modal-body {
+    padding: 0px !important;
+    overflow: hidden;
+    width: 500px !important;
+    @media @md {
+      width: calc(100vw - 40px) !important;
+    }
+    @media @sm {
+      max-width: calc(100vw - 20px) !important;
+      width: 100vw !important;
+    }
+    @media @xs {
+      max-width: calc(100vw - 20px) !important;
+      width: 100vw !important;
+    }
+  }
+  .ant-modal-close {
+    top: 5px !important;
+    right: 5px !important;
+  }
+  .ant-modal-close-x {
+    width: 25px !important;
+    height: 25px !important;
+    line-height: 25px !important;
+    font-size: 13px !important;
+    &:hover {
+      background-color: @btnColor !important;
+      border-radius: 50% !important;
+      color: @whiteColor !important;
+    }
+  }
+  @media @xs {
+    top: -5px !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

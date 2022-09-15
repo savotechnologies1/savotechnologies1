@@ -1,0 +1,257 @@
+//Media Queries
+@xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 991px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 480px)";
+@xs425: ~"(max-width: 425px)";
+// End of Media Queries
+
+@padding: 10px;
+@secondaryColor: #0dacd7;
+@titleColor: #007cd3;
+@primaryColor: #d5232f;
+@whiteColor: #fff;
+@bgHoverColor: #e6e6e6;
+@sideMenuBgColor: #f5f5f5;
+@darkGrey: #ccc;
+
+.searchModalLayout {
+  padding: 30px 30px 0px 30px !important;
+  border-radius: @padding;
+  width: 500px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  background-color: @whiteColor !important;
+  max-height: calc(100vh - 100px) !important;
+  overflow: auto !important;
+  @media @md {
+    width: 100% !important;
+    margin-left: 0px !important;
+  }
+  @media @sm {
+    max-height: calc(100vh - 180px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    padding: 15px 15px 0px 15px !important;
+  }
+  @media @xs {
+    max-height: calc(100vh - 180px) !important;
+    padding: 15px 15px 0px 15px !important;
+  }
+}
+.allowScroll {
+  overflow-y: auto;
+}
+.modalHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  :global {
+    .ant-btn-text {
+      @media @xs {
+        padding-left: 0px;
+        margin-bottom: 10px;
+        padding: 0px !important;
+      }
+    }
+  }
+}
+.searchBox_header {
+  @media @xs {
+    font-size: 13px !important;
+  }
+}
+.defaultTitle {
+  color: @titleColor !important;
+  cursor: pointer;
+  &:hover {
+    color: @primaryColor !important;
+  }
+  @media @xs {
+    font-size: 12px !important;
+  }
+}
+.selectionRow {
+  align-items: center;
+}
+.searchAgesText {
+  font-size: @padding + 5px;
+  @media @xs {
+    font-size: 14px;
+  }
+}
+.deshLine {
+  width: @padding + 10px;
+  height: 1px;
+  background-color: #000;
+  @media @xs {
+    width: 10px;
+  }
+}
+.searchModalInput {
+  margin: 0px 10px !important;
+}
+.cityDropdown {
+  width: 100% !important;
+  margin-top: 12px !important;
+}
+.dropdownClasssssss {
+  top: 35px !important;
+  margin-bottom: 10vh !important;
+  z-index: 2000 !important;
+}
+.checkboxRow {
+  padding-top: 12px !important;
+}
+.selectedTags {
+  margin-top: 12px !important;
+  :global {
+    .ant-tag {
+      background-color: @primary-color !important;
+      border-radius: 20px;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      color: @whiteColor;
+      > span {
+        > svg {
+          fill: @whiteColor;
+        }
+      }
+      @media @xs {
+        font-size: 12px;
+        padding: 3px 8px;
+        margin-right: 5px !important;
+      }
+    }
+  }
+}
+.moreLessRow {
+  display: flex;
+  align-items: center;
+}
+.moreLessText {
+  color: @titleColor !important;
+  margin: 0px 0px 15px 0px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  font-size: @padding + 6px;
+  padding: 0px;
+  display: flex;
+  border-bottom: 1px dotted transparent;
+  &:hover {
+    color: @primaryColor !important;
+    border-bottom: 1px dotted @primaryColor !important;
+  }
+  @media @xs {
+    font-size: @padding + 4px;
+  }
+}
+.hoverClassItem {
+  &:hover {
+    background-color: @bgHoverColor !important;
+  }
+}
+.sideMainItemName {
+  background-color: @sideMenuBgColor !important;
+}
+.sideContent {
+  display: flex;
+  width: 100%;
+}
+.subSide {
+  padding: 0 10px;
+  font-size: 16px;
+  max-height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &-active {
+    color: @whiteColor !important;
+  }
+}
+.tabView {
+  padding: 5px 10px;
+  cursor: pointer;
+  width: 100%;
+  @media @xs {
+    > span {
+      font-size: 14px !important;
+    }
+  }
+}
+.sideBartabView {
+  padding: 5px 10px;
+  margin: 4px;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 20px;
+  @media @xs {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+  &:hover {
+    background-color: @darkGrey;
+  }
+  &-active,
+  &-active:hover {
+    background-color: @primary-color;
+  }
+}
+.showBtnDiv {
+  display: flex;
+  justify-content: center;
+  position: sticky !important;
+  background: #fff;
+  z-index: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  bottom: 0px !important;
+  @media @sm {
+    z-index: 10 !important;
+    margin-bottom: 0px !important;
+  }
+}
+.showBtn {
+  width: fit-content;
+  border-radius: 5px !important;
+  @media @sm {
+    padding: 0px 5px !important;
+    font-size: 12px !important;
+    height: 30px !important;
+  }
+}
+.searchModalAffix {
+  top: 90px !important;
+  left: 50%;
+  right: 50%;
+  @media @md {
+    top: 70px !important;
+    width: 100% !important;
+  }
+  @media @sm {
+    height: 100% !important;
+  }
+  :global {
+    .ant-affix {
+      @media @sm {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+
+//Overridden Styles
+
+.ant-popover {
+  animation-duration: 0s !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}

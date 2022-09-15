@@ -1,0 +1,270 @@
+//Media Queries
+@xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+// End of Media Queries
+
+@white_color: #fff;
+@layoutBackgroundColor: #f9f9f9;
+@headerHeight: 87px;
+@smHeader: 64px;
+@txtColor: #222;
+
+body {
+  background-color: @layoutBackgroundColor !important;
+}
+.header {
+  background-color: @white_color;
+  height: @headerHeight !important;
+  padding: 0px !important;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  @media @md {
+    position: absolute !important;
+    height: @smHeader !important;
+  }
+  @media @xs {
+    position: absolute !important;
+    top: 0px !important;
+  }
+}
+.siderLayout {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.contentLayout {
+  background-color: @layoutBackgroundColor;
+}
+.myContactSider {
+  width: 100% !important;
+  padding: 0px !important;
+  margin: 0px !important;
+  transform: all 2s !important;
+  position: fixed;
+  top: 590px !important;
+  @media @xl {
+    top: 560px !important;
+  }
+  @media @lg {
+    top: 520px !important;
+  }
+  :global {
+    .ant-affix {
+      border-radius: 10px !important;
+      width: 100% !important;
+      transform: 2s !important;
+    }
+  }
+  &-active {
+    width: fit-content !important;
+    transition: all 0.5;
+    height: fit-content !important;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    border-radius: 10px !important;
+    overflow: hidden;
+    top: 695px !important;
+    @media @xl {
+      top: 665px !important;
+      max-height: 23% !important;
+    }
+    @media @lg {
+      top: 615px !important;
+      max-height: 25% !important;
+      margin-left: 20px !important;
+    }
+  }
+}
+.peopleIndexSider {
+  max-width: 100% !important;
+  min-width: 100% !important;
+  width: 100% !important;
+  background-color: transparent !important;
+  border-radius: 10px;
+  margin-left: 0px;
+  @media @lg {
+    margin-left: 20px;
+  }
+  &-active {
+    max-width: 100% !important;
+    min-width: 100% !important;
+    width: 100% !important;
+    background-color: transparent !important;
+    border-radius: 10px;
+    height: -webkit-fill-available;
+    margin-left: 0px;
+    @media @lg {
+      margin-left: 0px;
+    }
+  }
+}
+
+.chatInboxCol {
+  @media @lg {
+    margin-left: 5px !important;
+  }
+  @media @md {
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+  }
+  @media @xs {
+    padding-right: 0px !important;
+    margin: 0px !important;
+    overflow: auto;
+  }
+}
+.contactSiderCol {
+  position: relative;
+  :global {
+    .ant-affix {
+      position: fixed;
+      z-index: 10;
+      right: 20px;
+      @media (max-width: 1810px) {
+        max-width: 250px !important;
+        width: 100% !important;
+      }
+      @media @xl {
+        max-width: 250px !important;
+        width: 100% !important;
+      }
+      @media @lg {
+        max-width: 220px !important;
+        width: 100% !important;
+      }
+    }
+  }
+}
+.myContact_div {
+  position: fixed;
+}
+.contactSiderCol_active {
+  position: relative;
+  :global {
+    .ant-affix {
+      position: fixed;
+      z-index: 10;
+      right: 20px;
+      @media (max-width: 1810px) {
+        max-width: 250px !important;
+        width: 100% !important;
+      }
+      @media (max-width: 1580px) {
+        right: 5px;
+      }
+      @media @xl {
+        max-width: 260px !important;
+      }
+      @media @lg {
+        max-width: 240px !important;
+      }
+    }
+  }
+}
+.content_col_ {
+  @media (max-width: 1450px) {
+    max-width: 51% !important;
+  }
+  :global {
+    @media @xl {
+      .ant-col-xl-13 {
+        max-width: 100% !important;
+      }
+    }
+    @media @lg {
+      .ant-col-xl-13 {
+        max-width: 99% !important;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    max-width: 53% !important;
+  }
+  @media (max-width: 1150px) {
+    max-width: 52% !important;
+  }
+  @media (max-width: 1035px) {
+    max-width: 50% !important;
+  }
+  @media (max-width: 1024px) {
+    max-width: 41% !important;
+  }
+  @media (max-width: 990px) {
+    max-width: 49% !important;
+  }
+  @media (max-width: 754px) {
+    max-width: 100% !important;
+  }
+}
+.layout {
+  width: 100%;
+  background-color: @layoutBackgroundColor !important;
+  position: absolute;
+  top: @headerHeight !important;
+  z-index: 0;
+  @media @md {
+    top: @smHeader !important;
+  }
+}
+.content_xl_width {
+  width: 100%;
+  background-color: @layoutBackgroundColor !important;
+  position: absolute;
+  top: @headerHeight !important;
+  z-index: 0;
+  @media @xl {
+    width: 96%;
+  }
+  @media @lg {
+    width: 100%;
+  }
+  @media @md {
+    top: @smHeader !important;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: @primary-color;
+  border-radius: 10px;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: @txtColor;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+}
+.ant-modal-confirm-body-wrapper {
+  padding: 1.5rem !important;
+}

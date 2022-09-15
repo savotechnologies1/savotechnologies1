@@ -1,0 +1,85 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@lg1024: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+@xs375: ~"(max-width: 375px)";
+@xs320: ~"(max-width: 320px)";
+// End of Media Queries
+
+@offlineColor: #d4d4d4;
+@btnTextColor: #7f7f7f;
+@hoverOffline: #e8e8e8;
+@white: #fff;
+@red: #d5232f;
+@pixel: 10px;
+
+.popAffixRow {
+  background-color: @white !important;
+  position: relative !important;
+  right: 75px !important;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  :blobal {
+    .affix {
+      top: 200 !important;
+    }
+  }
+  @media @xs {
+    right: 90px !important;
+  }
+}
+.popAffixRowActive {
+  background-color: @white !important;
+  position: relative !important;
+  right: 175px !important;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  :blobal {
+    .affix {
+      top: 200 !important;
+    }
+  }
+  @media @lg1024 {
+    right: 185px !important;
+  }
+  @media @xs {
+    right: 150px !important;
+  }
+}
+.optionMenuAffix {
+  position: fixed;
+  top: 142px !important;
+  background-color: #fff !important;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 12%), 0 6px 16px 0 rgba(0, 0, 0, 8%),
+    0 9px 28px 8px rgba(0, 0, 0, 5%);
+  border-radius: 5px;
+  overflow: hidden;
+  width: fit-content !important;
+  @media @md {
+    top: 125px !important;
+  }
+  @media @xs {
+    top: 120px !important;
+  }
+}
+.popMenuCol {
+  display: flex;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  background-color: @white !important;
+}
+.menuBtnWhite {
+  border-radius: 5px !important;
+  border: none !important;
+  color: @btnTextColor !important;
+  margin-bottom: 5px !important;
+  &:hover {
+    color: @red !important;
+  }
+  @media @xs {
+    padding: 0px 10px !important;
+    height: 25px !important;
+    font-size: @pixel + 2px !important;
+  }
+}

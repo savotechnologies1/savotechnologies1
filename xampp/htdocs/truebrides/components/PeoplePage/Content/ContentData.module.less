@@ -1,0 +1,36 @@
+//Media Queries
+@lg: ~"(max-width: 1024px)";
+@md: ~"(max-width: 767px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 480px)";
+// End of Media Queries
+
+@white_Color: #fff;
+@padding: 0px 5px;
+@sizeFont: 20px;
+@radius: 10px;
+@bgColor: #d5232f;
+
+.containerDiv {
+  padding-left: 10px;
+  margin-bottom: 80px;
+}
+.fullW {
+  width: 100% !important;
+  margin-top: 5px;
+}
+.NoDataView {
+  margin-top: 200px;
+}
+.alertClass {
+  margin-top: 10px !important;
+  @media @xs {
+    margin-right: 10px !important;
+  }
+}
+.openALertClass {
+  margin-top: 10px !important;
+  @media @lg {
+    margin-right: 10px !important;
+  }
+}

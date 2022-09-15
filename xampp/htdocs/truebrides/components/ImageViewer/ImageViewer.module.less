@@ -1,0 +1,79 @@
+@pixel: 10px;
+@colorGrey: #222;
+@whiteColor: #fff;
+@secondaryColor: #0dacd7;
+@primaryColor: #d5232f;
+@coloGrey: #666;
+@darkGrey: #ccc;
+@colorBlack: #222;
+@shadowColor: #ecc1c1;
+
+.opendImg {
+  height: 100%;
+  width: 100%;
+}
+.imageViewerModal {
+  user-select: none;
+  height: calc(100vh - 200px);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0px !important;
+  :global {
+    .ant-modal-body {
+      padding: 0px !important;
+      max-height: 100%;
+      max-height: 100%;
+    }
+    .ant-modal-close {
+      top: 5px !important;
+      right: 5px !important;
+    }
+    .ant-modal-close-x {
+      width: 25px !important;
+      height: 25px !important;
+      line-height: 25px !important;
+      font-size: 13px !important;
+      background-color: @primaryColor !important;
+      border-radius: 50% !important;
+      color: @whiteColor !important;
+      &:hover {
+        background-color: darken(@primaryColor, -5%) !important;
+      }
+    }
+  }
+}
+.arrowIcons {
+  color: @primary-color;
+  font-size: 32px;
+  font-weight: bold;
+  z-index: 2;
+}
+.leftABtn {
+  position: absolute !important;
+  top: 45% !important;
+  left: 5%;
+  z-index: 2;
+  &:hover,
+  &:active,
+  &:focus {
+    > .leftArrowBtn {
+      color: darken(@primary-color, 10%);
+    }
+  }
+}
+.righAtBtn {
+  position: absolute !important;
+  top: 45% !important;
+  right: 5%;
+  z-index: 2;
+  &:hover,
+  &:active,
+  &:focus {
+    > .leftArrowBtn {
+      color: darken(@primary-color, 10%);
+    }
+  }
+}

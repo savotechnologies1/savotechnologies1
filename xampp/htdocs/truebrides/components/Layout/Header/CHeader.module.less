@@ -1,0 +1,587 @@
+//Media Queries
+@xl: ~"(max-width: 1199px)";
+@lg1024: ~"(max-width: 1024px)";
+@lg: ~"(max-width: 991px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 480px)";
+// End of Media Queries
+
+@titleTextSize: 24px;
+@textSize: 18px;
+@captionTextSize: 11px;
+@white: #fff;
+@secondaryColor: #d5232f;
+@primaryColor: #d5232f;
+@navbarTextSize: 14px;
+@hoverBtnColor: #f5f5f5;
+@layoutBackgroundColor: #f9f9f9;
+@black: #4e4e4e;
+@headerHeight: 87px;
+@smHeader: 64px;
+@pixel: 10px;
+
+.deleteall_btn {
+  padding: 0px 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: @captionTextSize + 1px;
+  font-weight: bold;
+  @media @sm {
+    margin-top: 10px;
+  }
+}
+.delete_noti_row {
+  position: fixed;
+  width: inherit;
+  z-index: 15;
+  background: @white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  @media @md {
+    width: 100%;
+    position: absolute;
+  }
+}
+.space_div_class {
+  flex-direction: column;
+  position: relative;
+  max-height: 500px !important;
+  overflow: auto;
+  background: #fff;
+  overflow-x: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.hContainer {
+  width: 100% !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  @media @lg1024 {
+    justify-content: center !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  @media @md {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+.heartIcon {
+  color: @primaryColor !important;
+  font-size: @pixel + 32px !important;
+  cursor: pointer;
+  @media @xs {
+    font-size: @pixel + 15px !important;
+  }
+}
+.heartAvatar {
+  color: @primaryColor !important;
+  font-size: @pixel + 16px !important;
+}
+.brandLogo {
+  height: 67px;
+}
+.logoText {
+  margin: 0px !important;
+  font-size: 32px;
+  font-weight: bold;
+  color: @black;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  display: flex !important;
+}
+.colStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.justifyStart {
+  justify-content: flex-start;
+}
+.justifyEnd {
+  justify-content: flex-end;
+}
+.headerMenu {
+  height: @headerHeight !important;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 0px !important;
+  padding: 0px !important;
+  top: 0px !important;
+  @media @md {
+    height: @smHeader !important;
+  }
+  @media @sm {
+    width: 100%;
+    justify-content: space-between;
+  }
+  @media @xs {
+    position: absolute !important;
+    top: 0px !important;
+  }
+  :global {
+    .ant-menu-item {
+      & {
+        top: 0px !important;
+        border: 0px !important;
+        margin: 0px !important;
+        margin-right: 0px !important;
+        display: flex !important;
+        align-self: stretch;
+        align-items: center !important;
+      }
+      &-only-child {
+        font-size: @navbarTextSize;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      &-active,
+      &-selected {
+        color: @primaryColor !important;
+        & svg {
+          color: @primaryColor;
+        }
+      }
+    }
+  }
+}
+.badgeCountClass {
+  :global {
+    .ant-scroll-number-only {
+      height: auto !important;
+    }
+    p.ant-scroll-number-only-unit {
+      height: auto !important;
+    }
+  }
+}
+.menusTextContainer {
+  display: inline-flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 32px !important;
+  @media @lg {
+    padding: 0px 16px !important;
+  }
+  @media @sm {
+    padding: 0px 8px !important;
+  }
+  &:hover,
+  &-active {
+    & span {
+      color: @primaryColor;
+    }
+  }
+}
+.navBarBtnContainer {
+  padding: 0px 16px;
+}
+.navbarBtn {
+  border-radius: 5px !important;
+  font-weight: 500 !important;
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  height: 37px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  @media @md {
+    height: 30px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+.credit_btn {
+  border-radius: 5px !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  height: 25px !important;
+  width: fit-content !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+  @media @sm {
+    line-height: 2px !important;
+  }
+}
+.menuIconContainer {
+  height: 100%;
+  padding: 0px 5px;
+  display: flex !important;
+  align-items: center !important;
+  position: relative;
+  top: 0 !important;
+  cursor: pointer;
+}
+.notiIconContainer {
+  height: 100%;
+  padding: 0px 5px;
+  display: flex !important;
+  align-items: center !important;
+  position: relative;
+  top: 0 !important;
+  cursor: pointer;
+  padding-left: 1rem;
+  &:hover,
+  &-active {
+    & svg {
+      fill: @primaryColor;
+    }
+  }
+}
+.menuIcon {
+  font-size: 24px !important;
+  margin-left: 32px !important;
+  margin-right: 32px !important;
+  color: @black;
+  @media @xs {
+    margin-left: 5px !important;
+    margin-right: 0px !important;
+  }
+}
+.profileMenuAffix {
+  @media @md {
+    top: 70px !important;
+    width: 100% !important;
+  }
+  @media @sm {
+    width: 100% !important;
+  }
+  :global {
+    .ant-affix {
+      @media @sm {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+.notiColClass {
+  height: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media @md {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+.notificationMenuAffix {
+  position: fixed !important;
+  top: 90px !important;
+  margin-left: -276px !important;
+  @media (max-width: 770px) {
+    top: 0px !important;
+    position: relative !important;
+    margin-left: 0px !important;
+  }
+  @media @sm {
+    position: sticky !important;
+    margin-left: 0px !important;
+    width: 100% !important;
+    left: 0px;
+    right: 0px;
+  }
+  :global {
+    .ant-affix {
+      @media @md {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+.chat_pop_class {
+  z-index: 0 !important;
+  top: 80px !important;
+  width: 500px !important;
+  @media @md {
+    top: 50px !important;
+    width: 100% !important;
+    position: relative !important;
+    left: 0px !important;
+  }
+  @media @xs {
+    width: 100% !important;
+    left: 0px !important;
+  }
+  :global {
+    .ant-popover {
+      z-index: 0 !important;
+    }
+    .ant-popover-content {
+      width: 100% !important;
+    }
+  }
+}
+.chatMobileClass {
+  @media @md {
+    top: 65px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    left: 0px !important;
+    margin: 0px auto !important;
+  }
+  @media @xs {
+    width: 100% !important;
+    left: 0px !important;
+  }
+  :global {
+    .ant-modal {
+      max-width: 100% !important;
+      margin: 0px auto !important;
+    }
+    .ant-popover {
+      z-index: 0 !important;
+    }
+    .ant-modal-close {
+      top: 10px !important;
+      right: 5px !important;
+      z-index: 99 !important;
+    }
+    .ant-modal-close-x {
+      width: 20px !important;
+      height: 20px !important;
+      line-height: 30px !important;
+      font-size: 12px !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background-color: @primary-color !important;
+        border-radius: 50% !important;
+        color: #fff !important;
+      }
+    }
+    .ant-modal-content {
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+    .ant-popover-content {
+      width: 100% !important;
+      max-height: calc(100vh - 180px) !important;
+      background-color: transparent !important;
+    }
+    .ant-modal-body {
+      height: 100% !important;
+    }
+  }
+}
+.chatModalClass {
+  top: 80px !important;
+  @media @md {
+    position: fixed !important;
+    z-index: 0 !important;
+    top: 55px !important;
+    @media @sm {
+      width: 100% !important;
+    }
+  }
+  :global {
+    .ant-popover {
+      z-index: 0 !important;
+    }
+    .ant-popover-content {
+      width: 100% !important;
+    }
+  }
+}
+.profileMenuContainer {
+  background-color: @white;
+  width: 276px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+  @media @sm {
+    margin-left: 0px;
+    width: 100%;
+  }
+}
+.profileColMb {
+  @media @sm {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+.notiMenuContainer {
+  background-color: #fff;
+  width: 286px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 30%);
+  @media @md {
+    margin-left: 0px;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+.menuSeperator {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+.profileNameContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  @media @sm {
+    display: none;
+  }
+}
+.profileBtnName {
+  font-size: @navbarTextSize !important;
+  line-height: @navbarTextSize + 8px !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+  margin: 0px 10px !important;
+  max-width: 200px !important;
+  @media (max-width: 830px) {
+    max-width: fit-content !important;
+  }
+  @media (max-width: 1100px) {
+    max-width: 130px !important;
+  }
+  @media @md {
+    font-size: @navbarTextSize - 3px !important;
+    line-height: @navbarTextSize + 3px !important;
+  }
+}
+.creditsText {
+  font-size: @navbarTextSize - 2px;
+  line-height: @navbarTextSize + 8px;
+  font-weight: 500;
+  margin: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media @md {
+    font-size: @navbarTextSize - 3px;
+    line-height: @navbarTextSize + 3px;
+  }
+}
+.diamonSVG {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+.linkBtns {
+  transition: color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  &:hover,
+  &:active {
+    color: @primaryColor !important;
+    background-color: transparent !important;
+  }
+}
+.linkBtnsActive {
+  color: @primaryColor !important;
+  &:hover,
+  &:active {
+    color: @primaryColor !important;
+    background-color: transparent !important;
+  }
+}
+.iconBtns {
+  &,
+  &:hover,
+  &:active {
+    color: @black !important;
+    font-size: 24px !important;
+    margin: 0px !important;
+  }
+}
+.headerTitlePeoplePage {
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: bold;
+  color: @black;
+  margin: 0px 5px;
+  @media @md {
+    font-size: 30px;
+  }
+}
+.notificationItem {
+  padding: 5px 12px;
+  display: flex;
+  position: relative;
+  flex-direction: row !important;
+  &:hover {
+    background-color: darken(#e9aeae, -15%);
+    & .notiRemoveBtn {
+      display: block;
+    }
+  }
+  &-unread {
+    background-color: darken(#fff, 6%);
+  }
+  .notiRemoveBtn {
+    cursor: pointer;
+    display: none;
+    color: @primaryColor;
+    font-size: 16px;
+    position: absolute;
+    top: 40px;
+    right: 4px;
+    z-index: 10;
+    padding: 2px 6px;
+    @media @md {
+      display: block;
+    }
+  }
+}
+.title_body_class {
+  @media @xs {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.m-0 {
+  margin-bottom: 0px !important;
+  line-height: 1.2rem;
+}
+//Overridden Styles of Antd
+.ant-space-item {
+  &,
+  &-split {
+    margin: 0px !important;
+  }
+}
+.ant-popover {
+  &-arrow {
+    display: none !important;
+  }
+  &-inner,
+  &-inner-content {
+    padding: 0px !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-radius: 10px !important;
+  }
+}
+.affix {
+  top: 10px;
+}
+.ant-menu-overflowed-submenu {
+  display: none !important;
+}
+.ant-scroll-number-only {
+  color: white !important;
+}
+
+.recoverPassText {
+  color: #ff230c;
+  font-size: 12px !important;
+}
+.signupDiv{
+  color: #ff230c;
+}
+.secondaryColor
+{
+  color: #ff230c;
+}

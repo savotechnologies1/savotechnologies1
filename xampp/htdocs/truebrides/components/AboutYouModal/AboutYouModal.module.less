@@ -1,0 +1,398 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@lg1024: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 425px)";
+@xs320: ~"(max-width: 320px)";
+// End of Media Queries
+
+@pixel: 10px;
+@colorGrey: #222;
+@whiteColor: #fff;
+@pixel: 10px;
+@secondaryColor: #0dacd7;
+@primaryColor: #d5232f;
+@coloGrey: #666;
+@darkGrey: #ccc;
+@colorBlack: #222;
+
+.aboutyoumodalrow {
+  display: flex;
+  width: 100% !important;
+  flex-direction: column;
+  align-items: center;
+  :global {
+    .ant-input {
+      width: 100% !important;
+    }
+  }
+  @media @xs {
+    padding: 0px 15px;
+  }
+}
+.aboutyouModalCol {
+  width: 100% !important;
+}
+.formItemBtnNext {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  :global {
+    .ant-form-item-control-input-content {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+  }
+  @media @xs {
+    margin-bottom: @pixel !important;
+  }
+}
+#interestingAboutMe {
+  width: 100% !important;
+}
+#idealPartner {
+  width: 100% !important;
+  margin: 0px 50px !important;
+  @media @xs {
+    margin: 0px 0px !important;
+  }
+}
+.aboutyouText {
+  font-size: @pixel+26px;
+  font-weight: 400;
+  line-height: @pixel+130px;
+  display: block;
+  margin-bottom: 0;
+  color: @colorGrey;
+  text-align: center;
+  @media @xs {
+    font-size: @pixel + 10px !important;
+    line-height: 60px !important;
+    padding: 0px 0px !important;
+  }
+  @media @xs320 {
+    font-size: @pixel + 7px !important;
+    padding: 0px 0px !important;
+  }
+}
+.formItemName {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  width: 100% !important;
+  display: flex;
+  align-items: flex-start;
+  :global {
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector,
+    .ant-picker {
+      justify-content: center;
+      width: 100% !important;
+      font-weight: normal !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      border-radius: 5px !important;
+      background-color: @whiteColor !important;
+      height: 40px !important;
+      @media @xs {
+        height: 30px !important;
+        font-size: @pixel + 2px !important;
+      }
+    }
+    .ant-select-selection-search-input {
+      height: 100% !important;
+    }
+    .ant-form-item-label {
+      white-space: none !important;
+    }
+    .ant-form-item-label > label {
+      height: 40px !important;
+    }
+  }
+}
+.modalBtnNext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px !important;
+  border-radius: 5px !important;
+  @media @xs {
+    margin-top: 10px !important;
+    height: 30px !important;
+    font-size: @pixel + 2px !important;
+    width: 90px !important;
+  }
+}
+.aboutYouModalInput {
+  height: 40px;
+  @media @xs {
+    height: 30px !important;
+    font-size: 12px !important;
+  }
+  :global {
+    .ant-picker-input > input {
+      @media @xs {
+        font-size: @pixel + 2px !important;
+      }
+    }
+  }
+}
+.EGclass {
+  font-size: 20px;
+  text-align: center;
+  @media @xs {
+    font-size: @pixel + 2px !important;
+  }
+  @media @xs320 {
+    font-size: @pixel !important;
+  }
+}
+.detailTextAboutYou {
+  font-size: 20px;
+  line-height: 1.2;
+  font-style: italic;
+  text-align: center;
+  @media @xs {
+    font-size: @pixel + 2px !important;
+  }
+  @media @xs320 {
+    font-size: @pixel + 1px !important;
+  }
+}
+.footerBtnGrp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 50px;
+}
+.flexDynamicContainer {
+  width: 800px !important;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 824px) {
+    width: 750px !important;
+  }
+  @media @md {
+    width: 100% !important;
+  }
+}
+.footerBtnGrp2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+  @media @xs {
+    padding-left: @pixel;
+    padding-right: @pixel;
+  }
+}
+.idealPartner {
+  width: 100% !important;
+  @media @xs {
+    width: 100% !important;
+    font-size: @pixel + 2px !important;
+  }
+}
+.imgUploader {
+  position: relative;
+  background: @whiteColor;
+  border-radius: 5px;
+  margin-bottom: @pixel + 25px;
+  cursor: pointer;
+  &:hover {
+    background-color: darken(@whiteColor, 5%);
+    & .uploadPhotoBtn {
+      background-color: rgba(0, 0, 0, 0.8) !important;
+    }
+  }
+}
+.uploadPhotoBtnImg {
+  width: 220px;
+  height: 220px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  object-position: center;
+}
+.uploadPhotoBtnImg1 {
+  padding: 30px 30px 0 30px;
+  width: 220px;
+  height: 220px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.uploadPhotoBtnText {
+  position: absolute;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: @whiteColor;
+  border: none;
+}
+.mainContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: fit-content !important;
+  width: 100% !important;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.1);
+  @media @xs {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+.aboutYouModalClass {
+  padding-bottom: 0px !important;
+  display: table !important;
+  :global {
+    .ant-modal {
+      @media @md {
+        width: 100% !important;
+      }
+      @media @xs {
+        width: 100% !important;
+      }
+    }
+    .ant-modal-content {
+      width: 100% !important;
+      display: flex !important;
+      justify-content: center !important;
+      border-radius: 10px !important;
+      overflow: hidden;
+      @media @xs {
+        top: -55px !important;
+        height: 100% !important;
+      }
+    }
+    .ant-modal-body {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      width: 100% !important;
+      background: transparent !important;
+      background-image: url(/assets/images/modal_background.jpg) !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      background-size: cover !important;
+      background-color: @colorGrey;
+      padding: 0px !important;
+      @media @xs {
+        height: 100% !important;
+      }
+    }
+  }
+  @media @md {
+    width: 100% !important;
+    display: flex !important;
+  }
+  @media @xs {
+    top: 50px;
+    width: 100% !important;
+  }
+}
+.aboutTextAreaRow {
+  margin: 0px 50px !important;
+  @media @lg {
+    margin: 0px 0px !important;
+  }
+  @media @lg1024 {
+    margin: 0px 0px !important;
+  }
+  :global {
+    .ant-input {
+      width: 100% !important;
+      height: 150px !important;
+    }
+  }
+  @media @lg {
+    margin: 0px 0px;
+  }
+  @media @xs {
+    margin: 0px 0px !important;
+  }
+}
+.aboutTextArea {
+  margin: 0px !important;
+}
+.subHeadTextContainer {
+  display: flex;
+  text-align: center;
+  margin-bottom: 20px;
+  @media @xs {
+    padding: 0px 0px;
+  }
+}
+#AboutForm {
+  @media @md {
+    padding: 0px 80px !important;
+  }
+  @media @xs {
+    padding: 0px 5px !important;
+  }
+}
+.stepsCricleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px 0px 50px 0px;
+  @media @xs {
+    margin: 10px 0px 15px 0px;
+  }
+}
+.interestRow {
+  padding: 0 10px;
+  padding-bottom: 40px;
+  font-size: 16px;
+  width: 90%;
+  &-active {
+    color: @whiteColor !important;
+  }
+  @media @xs {
+    width: 100%;
+  }
+}
+.interestsItem {
+  padding: 5px 10px;
+  margin: 4px;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 20px;
+  &:hover {
+    background-color: @whiteColor;
+  }
+  &-active,
+  &-active:hover {
+    i {
+      color: @whiteColor;
+    }
+    background-color: @primary-color;
+  }
+  @media @xs {
+    padding: 5px 10px;
+    margin: 4px 7px;
+    font-size: 13px !important;
+  }
+}
+//Override modal style
+.ant-input {
+  background-color: @whiteColor !important;
+  border-radius: 5px;
+}

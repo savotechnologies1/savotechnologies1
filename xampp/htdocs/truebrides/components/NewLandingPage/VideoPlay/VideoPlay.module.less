@@ -1,0 +1,263 @@
+//Media Queries
+// @xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1440px)";
+@lg1: ~"(max-width: 1024px)"; // laptop
+@md: ~"(max-width: 768px)";
+@sm573: ~"(max-width: 573px)";
+@sm: ~"(max-width: 549px)";
+@xs: ~"(max-width: 425px)";
+@xs375: ~"(max-width: 375px)";
+@xs320: ~"(max-width: 320px)";
+@xs280: ~"(max-width: 280px)";
+// End of Media Queries
+
+@pixel: 10px;
+@color: #d5232f;
+@lineColor: #e23844;
+@textColor: #545252;
+@shadowcolor: 0px 0px 0px 7px rgba(244, 211, 213, 80%);
+
+.videoplayRow {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+}
+.spanWelcome {
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+.startWelcomeText {
+  color: @color !important;
+  text-align: center;
+  font-size: @pixel + 10px !important;
+  @media @md {
+    font-size: @pixel + 6px !important;
+  }
+  @media @xs {
+    font-size: @pixel + 6px !important;
+  }
+}
+.spanPara {
+  display: flex;
+  flex-direction: column;
+  padding-top: @pixel + 30px;
+  padding-bottom: @pixel + 10px;
+  @media @md {
+    padding: 0px !important;
+  }
+}
+.startLoveChestTitle {
+  margin: 0px !important;
+  text-align: center;
+  @media @md {
+    font-size: 20px !important;
+  }
+  @media @xs {
+    font-size: 18px !important;
+  }
+}
+.spanLoveChest {
+  width: @pixel+100px !important;
+  height: 2px;
+  background-color: @lineColor;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  border-radius: @pixel + 10px;
+  @media @md {
+    width: 70px !important;
+  }
+  @media @xs {
+    width: 55px !important;
+  }
+}
+.communityText {
+  font-weight: bold !important;
+  @media @md {
+    font-size: @pixel + 4px !important;
+  }
+  @media @xs {
+    font-size: @pixel + 4px !important;
+  }
+  // padding: 0px 0 @pixel + 10px;
+}
+.videocoupleImg {
+  position: relative;
+  width: 100%;
+  background-image: url("https://truebrides.com/assets/images/landing-couple-photo-video-thumb.jpg") !important;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-right-radius: @pixel + 10px;
+  border-bottom-right-radius: @pixel + 10px;
+  @media @md {
+    height: 250px;
+    border-radius: @pixel + 10px;
+  }
+  @media @xs {
+    height: 260px;
+    border-radius: @pixel + 10px;
+  }
+  @media @xs375 {
+    height: 270px;
+  }
+}
+.glassEffectVideoPlay {
+  width: 100%;
+  height: 100%;
+  background: #e8d9d7;
+  position: absolute;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: @pixel + 10px;
+  border-bottom-right-radius: @pixel + 10px;
+  @media @md {
+    border-radius: @pixel + 10px;
+  }
+  @media @xs375 {
+    border-radius: @pixel + 10px !important;
+    overflow: hidden;
+  }
+}
+.videoThumb {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: fill;
+  border-top-right-radius: @pixel + 10px;
+  border-bottom-right-radius: @pixel + 10px;
+  border: none;
+  &:focus {
+    outline: 0;
+  }
+  @media @md {
+    border-radius: @pixel + 10px;
+  }
+  @media @xs375 {
+    border-radius: @pixel + 10px !important;
+    overflow: hidden;
+  }
+}
+.videoPara {
+  text-align: justify;
+  font-weight: 600;
+  @media @lg {
+    font-size: @pixel + 3px !important;
+  }
+  @media @lg1 {
+    font-size: @pixel + 3px !important;
+  }
+  @media @md {
+    font-size: @pixel + 2px !important;
+  }
+  @media @sm573 {
+    padding-bottom: @pixel !important;
+  }
+  @media @xs {
+    font-size: @pixel;
+    padding-bottom: @pixel;
+    border-radius: @pixel + 10px !important;
+  }
+}
+.textDivider {
+  color: @color;
+}
+.videoImgRedCirclePlay {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: @color;
+}
+.playIconBtn {
+  width: 90px;
+  height: 90px;
+  background-color: #d5232f;
+  border-radius: 50%;
+  position: absolute;
+  border: 7px solid rgba(244, 211, 213, 0.8);
+  cursor: pointer;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.playIconMiddle {
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.playIconBtnMobile {
+  width: 80px;
+  height: 80px;
+  background-color: #d5232f;
+  border-radius: 50%;
+  position: absolute;
+  border: 7px solid rgba(244, 211, 213, 0.8);
+  cursor: pointer;
+  top: 50%;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+.playIconMiddleMobile {
+  font-size: 30px;
+  color: #fff !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dreamText {
+  font-size: @pixel + 20px;
+  font-family: auto;
+  color: @color !important;
+  opacity: 0.5;
+}
+.dreamingText {
+  font-family: auto;
+  color: @color !important;
+  opacity: 0.5;
+}
+.videoWelcomeTextRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: @pixel+60px;
+  @media @md {
+    padding-bottom: @pixel;
+  }
+}
+@media (max-width: 768px) {
+  .dreamText {
+    overflow: hidden;
+    font-size: @pixel+10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .spanPara {
+    padding-top: 0px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .spanPara {
+    padding-top: 0px !important;
+  }
+}
+
+@media (max-width: 425px) {
+  .spanPara {
+    padding-top: 0px !important;
+  }
+}

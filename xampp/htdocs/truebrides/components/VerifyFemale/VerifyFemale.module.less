@@ -1,0 +1,55 @@
+//Media Queries
+@xl: ~"(max-width: 1440px)";
+@lg: ~"(max-width: 1024px)";
+@md: ~"(max-width: 768px)";
+@sm: ~"(max-width: 575px)";
+@xs: ~"(max-width: 500px)";
+// End of Media Queries
+
+@white_color: #fff;
+
+.verifyCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.5px solid #ccc;
+  border-radius: 5px;
+  padding: 45px 10px;
+  @media @xs {
+    margin-right: 10px;
+    padding: 20px 10px;
+  }
+}
+.verifyMainTitle {
+  font-size: 18px;
+  text-align: center;
+  @media @xs {
+    font-size: 14px;
+  }
+}
+.tickIcon {
+  font-size: 50px;
+  margin-top: 10px;
+  color: #52c41a;
+  @media @xs {
+    font-size: 35px;
+  }
+}
+.centerTxtDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.supportDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 30px;
+  width: 100%;
+}
+.marginTopTxt {
+  margin-top: 20px;
+}
